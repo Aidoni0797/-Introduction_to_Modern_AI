@@ -66,4 +66,42 @@ On the right it answers No which is correct. Why is that? The way chatbots produ
 word at a time.
 
 Let's look at that in more detail and see how you can tailor your prompts to make the most of this behavior. 
-Let's see what it means for a chatbor to predict the next word. Here, I'm using Hugging
+Let's see what it means for a chatbor to predict the next word. Here, I'm using HuggingChat to use a model from Mistral AI.
+My input prompt will be: twinkle twinkle little. And the completion is: star how I wonder what you are and so on. This is
+why the output is called a completion.
+Because the early versions of chatbots learned to take an imcomplete start of a sentence and to predict the next words
+that would complete the rest of that sentence.
+
+So a chatbot takes your input, the prompt, and it does not output its entire completion all at once.
+
+It actually outputs a word or part of a word at a time. So given  the input twinkle twinkle little
+it outputs: star, then it appends its own output to the initial prompt.
+So now the input that it sees is: twinkle twinkle little star.
+
+And based on that it outputs another word or part of a word.
+
+In this case, the word: how. And it repeats this process, appending its own output to the accumulated text which is now:
+twinkle twinkle little star how. And it uses that entire input
+to help it predict the next word which is: I, And so on and so on.
+
+So you might notice that you are probably not used to writing prompts this way because you are used to already writing them 
+as imstructions as in, please give me information or summarize this piece of text.
+But before chatbots were explicitly trained to follow human like instructions like perform this task. The way they
+would normally work is they would just try to complete a piece of text. for example, given:
+twinkle twinkle little, it tries to figure out that the next word is probably: star
+
+And then the other words following  will be: how I wonder what you are.
+
+This has implications for how a chatbot performs a task.
+
+Let's revisit that logic problem in more detail. Here is the logic problem.
+
+My friend and I have eight additional friends who wish to go to a restaurant.
+
+My car fits four people.  My friend's car fits people.
+
+No one else has cars. It takes 20 minutes to drive to the restaurant.
+
+Can we all get to the restaurant with our cars in 20 minutes?
+
+So the number of people to transport is me plus my friend plus 
