@@ -1,0 +1,30 @@
+1.0.3 Definition of AI
+
+Review:
+- The imitation Game (The Turing Test): If a machine can convince a human that it is also a human, then it has "passed"
+the Turning Test, and can be said  to demostrate intelligence.
+- Artifical Intelligence is a field of research with the goal of getting machines to perform tasks that require 
+intelligence.
+
+1.0.5 Machine Learning
+
+Review:
+- Machine LEarning: A computer program is said to learn from experince E, with respect to some class of tasks T and 
+performance measure P if its performance at tasks in T, as measured by P, improves with experience E.
+
+1.0.6 Models
+
+Review:
+- A model is a function that takes inputs and processes those inputs to product outputs. A  model learns from experince
+and feedback to update how it produces these outputs, in order to perform better at a task.
+- A parameter is a number in a model that can be updated in order to improve the model's performance at a task.
+- A neural network is a category of macjine learning models that consists of neurons that are grouped together in layers.
+Neural networks are commonly referred to as "deep learning".
+
+1.0.7 Study Tip: The Big Picture
+Optional Suggested Practice and Reflections
+Try out the Teachable Machine here:  https://teachablemachine.withgoogle.com/
+
+Please share what you tried, and what you observed. What worked? What did not work so well?
+
+Your feedback will help us we update the course in the future. Thank you!
