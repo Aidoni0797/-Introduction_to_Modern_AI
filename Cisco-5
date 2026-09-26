@@ -104,4 +104,31 @@ No one else has cars. It takes 20 minutes to drive to the restaurant.
 
 Can we all get to the restaurant with our cars in 20 minutes?
 
-So the number of people to transport is me plus my friend plus 
+So the number of people to transport is me plus my friend plus eight more or 10 people.
+
+The number of seats in the cars is four plus five or nine.
+
+The correct answer should be no.
+
+Now let's look at the two outputs of the same model when given the same logic
+
+But with the last instruction worded diffrently. On the left where it was prompted with, give your answer, then give 
+your reasoning
+It says yes, we can all get to the restaurant within 20 minutes.
+
+It goes through some reasonin that so far appears to be correct.
+
+Than it says this, this leaves one remaining who can accompany either you or your friend in their respective cars. So here is where
+the reasoning is going wrong in order to justify  its answer of Yes. Now let us lookk at the response on the right side where
+the Chatbot was prompted with, give your reasoning then give your answer. It starts by calculating that there are a total
+of 10 people and also cotinues with leaving one person withour a ride.
+
+It also correctly states that it its not possible to transport all 10 people to the restaurant in 20 minutes. Then gives the answer.
+
+No. Now that you know that the chatbot predicts one word  at a time and it can look back at all of its
+previously predicted words to predict the next one. You might be able to see what's going on.
+
+If it gives the answer first, then things through the logic problem,
+it won't be able to use all of its reasoning to help it give that answer because it already gave the answer, even  if the
+reasoning is wrong.
+On the other hand, if you 
