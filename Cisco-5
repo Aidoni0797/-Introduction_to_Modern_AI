@@ -7,4 +7,51 @@ I would like to geive you just two vocabulary
 words upfront as you will hear them a lot. The input that you give to a chatbot is called a prompt and its output is
 called a completion. But you might also hear this referred to as a response. You will learn a bit more about why the input
 is called a prompt and the output called a completion a little bit later in the course.
-But for now, hwen you hear prompt
+But for now, when you hear prompt, just think input and when you hear completion or response.
+think output. You may have already used chatbots before and realized that you can ask it.
+
+for information, like with a search engine
+
+There is actually quite a lot that you can do with chatbots.
+
+So I would like to group these types of tasks into seven categories.
+
+You can Expand, you can Synthesize, you can Transform, Evaluate.
+
+you can Chat, Take actions and you can also input not just text but also images with text into the chatbot.
+Let's take a look at examples for each of these seven categories to see what they mean. By Expand,
+I mean that you can ask a simple question such as: Who is BTS? And the chatbot will expand on that by output a lot of
+information about what you asked for.
+
+And another way of expanding is asking it to help you generate ideas.
+
+For example, you can ask it to give you some suggestions for jokes or suggestions for places.
+to go on vacation based on your personal interests.
+
+So expand is not a formal scientific definition, but I use it to describe intances where you
+
+Here links yo chatbots that you'll see in this course. Many allow free limited use. Some may require the creation of a free
+account. Most also provide additional use or access to more advanced models for a free. The availability of these services
+may depend on the country or region that you live in, so you may need to choose chatbots that are available in your region.
+
+Review
+Expand:Answer questions, generate ideas
+Synthesize: summarize, label
+Transform: translate, reword or rewrite
+Evaluate: fact check, grade
+Chat: dialogue with achatbot
+Take actions: set a calendar event, search the internet
+Input images and text: Ask a question about a picture
+
+Suggested practice:
+Some prompts to get started:
+Who is BTS?
+
+Give me suggestions for places to go on vacation.
+
+
+1.3.2 Predict the Next Word
+Say you have a logic problem that you want the chatbot to solve. And you can choose two slightly different ways to write
+the last sentence of your prompt.
+Give your answer, then give your reasoning. Alternatively, give your reasoning.
+then give 
