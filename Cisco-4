@@ -1,0 +1,27 @@
+1.2.1 Machine Translation: Words and Word Order
+
+Review:
+Homonyms: same spelling, same pronunciation
+Examples: wave, match, spring, lie, bark, right, light, tire, park, can
+
+Homographs: same spelling, may or may not have same pronunciation.
+
+Examples: wind, tear, bow, contract, content, lead
+
+Suggested practice:
+Word order: Chack if the word order stays consistent  for a given language. For instance, translate from English  to Spanish:
+adorable llamas" and "cute llamas". Does the Spanish translation follow the word order "noun adjective" consistently?
+
+Homonyms and homographs: Try using context around a homonym or homograph to get the translation model to switch between
+the two meanings.
+
+Cultural References:
+“Tearin’ Up My Heart” by N’ Sync
+
+“Save Your Tears” by The Weeknd
+
+1.2.2 Machine Translation: Context
+
+Suggested practice:
+
+Try to add context to get a translation model to use the formal version of you in a language
