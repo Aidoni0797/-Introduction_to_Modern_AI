@@ -1,0 +1,46 @@
+1.1.1 Object Detection
+Review:
+Object localization: locate an object with a bounding box (a rectangle).
+Image classification: identify the category (a text label) that an image belongs to.
+Object detection: idetify both the location and category of objects in an image.
+
+Suggested practice:
+
+Use a photo app and some pictures to identify the objects in the pictures. Notice how taking photos at different angles,
+or adjusting the bounding box can lead to different results for the suggested classes of the objects.
+
+Apps used:
+
+If you have a smartphone, your built-in photo app or photo album may have object detection built in. You can also download
+Google Photos onto and Android or iPhone.
+
+1.1.2 Similarity Search
+Review:
+Enbeddings are lists of numbers that describe an image in a compact way. Embeddings can be created for images, but also 
+other things like text, audio.
+
+The distance between two embeddings is measure of how similar the two images are.
+
+Similarity search creates an embedding for the search image, and compares it to embeddings of other images in a database.
+It identifies other images for which the embeddings are a shorter distance to the search image's embedding, and returns
+those associated images as similar to the search image's embedding, and returns those associated images as similar to
+the search image. This can be applied to other things like text and audio.
+
+1.1.3 Image Segmentation
+
+Rebiew:
+Image segmentation identifies all the pixels that are associated with a particular object in an image.
+
+Apps used:
+Meta AI website
+You can also go directly to AI Demos
+
+The Segment Anything model site
+
+Suggested  practice:
+Find a video and practice segmenting parts of it using the Segement Anything Model.
+
+1.1.4 Optical Character Recognition
+
+Review:
+Optical Character Recognition extracts text from inside an image so that you can 
