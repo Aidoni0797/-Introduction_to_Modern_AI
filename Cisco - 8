@@ -16,4 +16,13 @@ For example, list some resources, then collect key information like persons and 
 
 then list out similiarities and then list out differences and finally draw some conclusions.
 
-So it is nice that when you give your prompt more structure and also flesh out what you are looking for, it also 
+So it is nice that when you give your prompt more structure and also flesh out what you are looking for, it also will
+prompt the chatbot to follow your structure and also provide more information that you are asking for. And you can ask follow
+up question or add  follow up instructions. For example, for the previous two topics, divide your analysis into two parts.
+Compare and contrast the music and then compare and contrast, the dance style. Notice that you could have also included this
+in the previous prompt so that it is just one long prompt. But sometimes you may get better results if you break up your task 
+into separate prompts, if you ask a chatbot to do too many things, it may not do all of them that well compared to if it was
+able to focus on fewer tasks at the same time. Anв let's see what it says.
+And you can ask it to review its previous worl. Sometimes it can spot its own mistakes.
+if you just it to double chechk. People have been calling this prompting technique reflection because the model is asked to reflect
+on its precious completions 
