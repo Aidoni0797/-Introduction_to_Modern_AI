@@ -1,0 +1,19 @@
+1.4.1 Expand: Answer Questions
+
+You've probably used chatbots in the same way that you use web search by asking a question and getting an answer. This is an example 
+of an Expand task in that you give it a small input such as, who is Taylor Swift, and you get a lot of information back.
+
+Let's take a look at how you can use chatbots for question answering.
+Let's look at various ways that you can ask for information from a chatbot.
+
+We can start with asking a question such as, what is k-pop and hip hop?
+Let's see what that chatbot says.
+Beyond asking a question, you can also request information with explicit instructions.
+For example, you can say compare and contrast, or list, or describe, or explain and you can give prompt more structure
+with a sequence of sub tasks.
+
+For example, list some resources, then collect key information like persons and terminology.
+
+then list out similiarities and then list out differences and finally draw some conclusions.
+
+So it is nice that when you give your prompt more structure and 
