@@ -1,1 +1,13 @@
+1.3.2 Predict the Next Word
 
+Say you have a logic problem that you want the chatbot to solve. And you can choose two  slightly different ways to write
+the last sentence of your prompt.
+Give your answer, then give your reasoning. Alternatively, give your reasoning. then give your answer. Here is a logic 
+problem. And don't worry, I'll talk to the details a bit later.
+Sor for now all you need to know is that the correct answer is NO.
+Now let's  see how a chatbot responds when I give it this logic problem where the last sentence is written in one of these
+two ways. So I'll show this text more clearly in a bit but on the left it answers Yes, which is incorrect.
+On the right it answers No, which is correct. Why is that? The way chatbots produce their output is by predicting the next
+word one at a time.
+Let's look at that in more detail and see how you can tailor your prompts to make the most of this behaviour. Let's see
+what it means for a chatbot to predict the next 
