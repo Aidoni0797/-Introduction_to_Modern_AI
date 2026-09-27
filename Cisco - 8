@@ -25,4 +25,10 @@ into separate prompts, if you ask a chatbot to do too many things, it may not do
 able to focus on fewer tasks at the same time. Anв let's see what it says.
 And you can ask it to review its previous worl. Sometimes it can spot its own mistakes.
 if you just it to double chechk. People have been calling this prompting technique reflection because the model is asked to reflect
-on its precious completions 
+on its precious completions to check if they can be improved or corrected. So for instance, they can be improved or corrected.
+sor for instance, ypu can ask it to check for factual accuracy  and also ask it to add any additional information. Asking a chatbot
+to review its work can make a difference. Because once a chatbot predicts a word, it only moves on to the next word and
+the next and can't go back to change or remove any word that it is already output
+And to make it easier to see what it decided to revise
+I'll ask it to copy over its original output that it revied followed by the clacification or addition
+I am calling +
