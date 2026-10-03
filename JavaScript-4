@@ -47,3 +47,4 @@ custom_headers = {
 'Connection':'keep-alive'
 }
 response = requests.get()
+https://prosperasoft.com/blog/web-scrapping/beautiful-soup/beautiful-soup-bypass-blocks/
