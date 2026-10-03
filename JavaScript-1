@@ -57,4 +57,26 @@ tasked with. Requests-HTML allows you to use a simple API to make requests and c
 If you need to extract data quickly from a website with minimal interaction, this can be your go-to solution.
 
 Requests-HTML Code Example
-Here's a simple 
+Here's a simple example of how to scrape JavaScript-rendered content using Requests-HTML.
+
+Requests-HTML Scraping Example
+
+from requests_html import HTMLSession
+
+#Create an HTML Session
+session = HTMLSession()
+
+#Get the HTML content of the page
+response = session.get('http://example.com')
+
+#Render the JavaScript
+response.html.render()
+
+#Parse the dynamic content with BeautifulSoup
+soup = BeautifulSoup(response.html.html, 'html.parser')
+titles = soup.find_all('h1')
+
+for title in titles:
+  print(title.text)
+
+Best Practices for Java
