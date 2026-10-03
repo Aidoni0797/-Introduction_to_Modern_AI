@@ -27,5 +27,12 @@ import random
 user_agent = [
 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geko) Chrome/89.0.4389.82 Safari/537.36',
 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15',
-'Mozilla/5.0 (Linux; Android 10; Nexus)'
+'Mozilla/5.0 (Linux; Android 10; Nexus 5X Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127
+Mobile Safari/537.36'
 ]
+
+headers = {'User-Agent': random.choice(user_agents)}
+response = requests.get('http://example.com', headers=headers)
+
+Handling Request HEaders
+In addition to 
