@@ -1,0 +1,60 @@
+The Challange of JavaScript-Rendered Content
+
+When web scraping, it's common to encounter pages where the content is generated dynamicallt through Javascript. 
+Traditionally, developers relled on BeautifulSoup in conjuction with requests to scrape static HTML pages. However, when it
+comes to JavaScript - rendered content, BeautifulSoup alone can leave you wanting. This limitation arises because 
+BeautifulSoup cannot execute JavaScript; it only parses HTML. As a result, scraping data from dynamically loaded web content
+requires an alternative approach.
+
+Why Beautiful Soup isn't enough
+BeautifulSoup iss an outstanding library for parsing HTML and XML documents, making it an invaluable tool in a data scraping
+toolkit. However, for pages that rely heavily on JavaScript to display content, simply using BEautifulSoup will not yield
+the desired results. The HTML content you receive from requests may lack the  dynamic elements that would normally load on a browser.
+To handle this challenge, it's essential to combine BeautifulSoup with tools that can render Java Script.
+
+Tools for Scraping JavaScript - Generated Content
+Two popular options for scraping dynamic content are Selenium and Requests-HTML. Both libraries provide the capability to render
+JavaScript, allowing you to extract the data you need effectively. Here's how each tool can help:
+
+Using Selenium for Dynamic Content Scraping
+Selenium is a powerful web scraping library that automates browser actions. This means you can scrape any website that uses
+JavaScript to load content, just like a real user would. Using Selenium, you can navigate through websites and interact with elements,
+while also waiting for content to load before scraping. Here's a simple example that demonstrates how to use it for scraping Java
+Script - rendered content.
+
+Selenium Code Example
+
+Below is a basic exampole of using Selenium to scrape a dynamically populated list of titles from a webpage.
+Selenium Scraping Example
+
+from selenium import webdriver
+from bs4 import BeautifulSoup
+import time
+
+#Initialize the Selenium WebDriver
+diver = webdriver.Chrome()
+
+#Navigate to the target website
+driver.get('http://example.com')
+
+#Wait for the page to load the dynamic content
+time.sleep(5) #Adjust timing as needed
+
+#Get the page source and parse it with BeautifulSoup
+soup = BeautifulSoup(driver.page_source, 'html.parser')
+titles = soup.find_all('h1')
+
+for title in titles:
+  print(tetile.text)
+
+#Quit the WebDriver
+driver.quit()
+
+Using Requests-HTML for Simple JavaScript Scraping
+
+Requests-HTML is another excellent choice, expecially for tasks that are less complex than what Selenium might be
+tasked with. Requests-HTML allows you to use a simple API to make requests and can render the JavaScript automatically.
+If you need to extract data quickly from a website with minimal interaction, this can be your go-to solution.
+
+Requests-HTML Code Example
+Here's a simple 
