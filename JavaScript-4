@@ -40,4 +40,4 @@ includes setting headers like 'Referer', 'Accept-Language', and 'Connection'. In
 anti-scraping mechanisms to flag your activity as suspicious.
 
 Setting Custom Request Headers
-custom
+custom_headers = {}
