@@ -34,7 +34,10 @@ Mobile Safari/537.36'
 headers = {'User-Agent': random.choice(user_agents)}
 response = requests.get('http://example.com', headers=headers)
 
-Handling Request HEaders
+Handling Request Headers
 In addition to rotating user agents, handling request headers properly can help you mimic a normal browser request. This
 includes setting headers like 'Referer', 'Accept-Language', and 'Connection'. Incorrect or absent headers can trigger 
-anti-scraping
+anti-scraping mechanisms to flag your activity as suspicious.
+
+Setting Custom Request Headers
+custom
