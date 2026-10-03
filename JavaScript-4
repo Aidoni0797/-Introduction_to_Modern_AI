@@ -18,4 +18,14 @@ Rotating User Agents
 
 One of the simplest yet effective techniques for bypassing anti-scraping blocks is rotating your user agents. User agents 
 tell the server what type of client is accessing the website. By rotating these user agents, you can make your requests
-appear to come from different browsers or devices, reducing the li
+appear to come from different browsers or devices, reducing the likelihood of getting blocked.
+
+Rotating User Agents Implementation
+import requests 
+import random
+
+user_agent = [
+'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geko) Chrome/89.0.4389.82 Safari/537.36',
+'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15',
+'Mozilla/5.0 (Linux; Android 10; Nexus)'
+]
