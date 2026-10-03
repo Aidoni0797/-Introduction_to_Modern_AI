@@ -21,4 +21,6 @@ Once you understand how pagination works, the next step is to create a loop that
 By modifying the query parameter in the URL, you can request each page in succession. Be mindful of the website's terms
 of service when implementing your scraping strategy to avoid being banned or throttled.
 
-Avoiding
+Avoiding Duplicate Data
+When Scraping multiple pages, it's essential to implement a method to avoid collecting duplicate data. One common approach
+is to use a set to track unique 
