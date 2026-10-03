@@ -35,4 +35,6 @@ headers = {'User-Agent': random.choice(user_agents)}
 response = requests.get('http://example.com', headers=headers)
 
 Handling Request HEaders
-In addition to 
+In addition to rotating user agents, handling request headers properly can help you mimic a normal browser request. This
+includes setting headers like 'Referer', 'Accept-Language', and 'Connection'. Incorrect or absent headers can trigger 
+anti-scraping
