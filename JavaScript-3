@@ -10,3 +10,58 @@ The Need for Performance Optimization
 When handling large-scale web-scraping projects, slow performance can result in missed data or even HTTP bans. Therefore,
 improving performance becomes essential, especially during data extraction from complex sites. This guide will delve into
 advanced techniques involving parallelizing requests, optimizing HTML parsing, and reducing memory usage.
+
+Parallelizing Requests with Multiprocessing 
+Multiprocessing allows Python to create multiple processes, effectively enabling parallel  requests. This can significantly 
+enhance the scraping speed when visiting numerous URLs. Using multiprocessing, you can distribute the workload across
+different CPU cores, minimizing wait times and maximizing throughput.
+
+Multiprocessing Example for Beautiful Soup
+
+import request
+from bs4 import BeautifulSoup
+from multiprocessing import Pool
+
+urls = ['http://example.com/page1', 'http://example.com/page2']
+
+
+def scrape(url):
+  response = requests.get(url)
+  soup = BeautifulSoup(response.text, 'html.parser')
+  return soup.title.string
+
+if __name__ == '__main__':
+  with Pool(processes=S) as pool:
+    results = pool.map(scrape, urls)
+    print(results)
+
+Leveraging Asyncio for Concurrency
+
+In addition to multiprocessing, utilizing asyncio can further boost performance. This library allows you to manage a large
+number of network operations comcurrently without blocking the xecution. When you're scraping data from numerous sites,
+this can greatly enhance efficency and speed.
+
+Asyncio Example for Concurrent Requests
+import aiohttp
+import asyncio
+rfom bs4 import BeautifulSoup
+
+urls = ['http://example.com/page1', 'http://example.com/page2']
+
+async def scrape(session, url):
+  async with session.get(url) as response:
+    html = await response.text()
+    soup = BeautifulSoup(html, 'html.parser')
+    return soup.title.string
+
+async def main():
+  async with aiohttp.ClientSession() as session:
+    tasks = [scrape(sessiom, url) for url in urls]
+    return await asyncio.gather(*tasks)
+
+if __name__ == '__main__':
+  asyncio.run(main())
+
+Optimizing HTML Parsing
+
+Optimizing th 
