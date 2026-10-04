@@ -14,4 +14,9 @@ your application's backend.
 
 Understanding Supebase API Keys
 
-Supabase provides two main types 
+Supabase provides two main types of API keys:
+- Anonymous (anon) Key: Used for public access to your
+database. This key should be used in client-side applications
+where authentication and authorization policies determine 
+user access.
+- Service Role Key: A highly 
