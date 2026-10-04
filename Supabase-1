@@ -1,0 +1,11 @@
+Supabase-1
+
+Securing API Keys in Supabase Intagrations: Best Practices 
+for Developers
+
+In the era of cloud - based applicationsms, ensuring the 
+security of your API keys is paramount. Supabase an
+open-source alternative to Firebase provides developers
+with powerful tools to build scalable applications.
+However, improper handling of API keys can expose applications
+to data breaches and unautorized 
