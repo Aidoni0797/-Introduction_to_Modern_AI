@@ -8,4 +8,10 @@ security of your API keys is paramount. Supabase an
 open-source alternative to Firebase provides developers
 with powerful tools to build scalable applications.
 However, improper handling of API keys can expose applications
-to data breaches and unautorized 
+to data breaches and unautorized access. This blog explores 
+best practices to secure your Supabase API keysand safeguard
+your application's backend.
+
+Understanding Supebase API Keys
+
+Supabase provides two main types 
