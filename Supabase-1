@@ -19,4 +19,5 @@ Supabase provides two main types of API keys:
 database. This key should be used in client-side applications
 where authentication and authorization policies determine 
 user access.
-- Service Role Key: A highly 
+- Service Role Key: A highly priveliged key that bypasses
+Row Level Security (RLS) and should never be espected 
