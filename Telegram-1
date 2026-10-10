@@ -1,0 +1,21 @@
+Telegram-1
+iDONi reads in your life firstime documentation telegram. Very interesting
+
+We offer three kinds of AIPs for developers. The Bot API allows you to easily create programs that use Telegram messages
+for an interface. The Telegram API and TDLib allow you ti build your own customized Telegram clients. You are welcome to use
+both APIs free of charge. Lastly, Gateway API allows any bussiness,a pp or website to send verification codes through Telegram
+instead of traditional SMS.
+
+You can also add Telegram Widgets to your website.
+
+Designers are welcome to create Animated Stickers and Emoji or Custom Themes for Telegram.
+
+Bit API 
+This API allows you to connect bots to our system. Telegram Bots are special accounts that do not require an additional phone
+number to set up. These acccounts serve as an interface for code running somewhere on your server.
+
+To use this, you don't need to know anything about how our MTProto encryption protocol works - our intermediary server will
+handle all encryption and communication with the Telefram API for you. You communicate with this server via a simple HTTPS
+interface that offers a simplefied version of the Telegram API.
+
+But developers can also
