@@ -148,3 +148,19 @@ Password recovery
 If the user has forgetten their 2FA password, the following recovery options are available:
 - Logged-in sessions only: password reset
 - Logged-in and notlogged-in sessions: email recovery
+- Not logged-in sessions: account deletion
+
+Password reset
+PAssword reset can be requested from logged-in sessions only.
+The following procedure can be used to reset the password without deleting the account:
+
+account.resetPasswordFailedWait#e3779861 retry_date:int = account.ResetPasswordResult;
+account.resetPasswordRequestedWait#e9effc7d until_date:int = account.ResetPasswordResult;
+account.resetPasswordOk#e926d63e = account.ResetPasswordResult;
+
+---functions---
+
+account.resetPassword#9308ce1b = account.ResetPasswordResult;
+account.declinePasswordReset#4c9409f6 = Bool;
+
+If the
