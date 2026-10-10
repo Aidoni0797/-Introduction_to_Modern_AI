@@ -163,4 +163,5 @@ account.resetPasswordOk#e926d63e = account.ResetPasswordResult;
 account.resetPassword#9308ce1b = account.ResetPasswordResult;
 account.declinePasswordReset#4c9409f6 = Bool;
 
-If the
+If the user is already logged in and has forgetten their 2FA password, account.resetPAssword can be used to initiate
+a password reset. On success, the call 
