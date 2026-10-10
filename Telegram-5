@@ -9,3 +9,6 @@ family protocols while fixing some of their shortcomings.
 
 The following is a description of SRP-6 and 6a, the latest versions of SRP:
 N - A large safe prime (N=2q+1, where q is prime)
+All arithmetic is done modulo N
+g - A generator modulo N
+k - Multipler parameter (k=)
