@@ -43,5 +43,19 @@ on p mod 4g -- namely, p mod 8 =7 for g=2; p mod3=2 for g=3l no extra condition 
 the result, so as to avoid repeating lengthy computations in future. This cache might be shared with one used for
 Autorizaition Key generation.
 
-If the client has an inadequate random number generator, it makes sense to use 
+If the client has an inadequate random number generator, it makes sense to use the secure_random of account.password as
+additional seed.
+
+password := (user-provided password)
+salt1:=algo.salt1
+salt2:=algo.salt2
+g-b:=srp.B srp_B and srp_id are extracted from the account.password object.
+The k parameter is generated: the client does this, and the server does the same with the g_a we will send him later
+(see below)
+u:=H(g_a | g_b)
+The final parameters are generated client-side only:
+x:=PH2(password, salt1, salt2)
+v:=pow(g,x) mod p
+
+The server already has v, from when we set
 
