@@ -110,4 +110,28 @@ M1 is passed to inputCheckPasswordSRP, along with g_a (as A parameter) and the s
 object.
 
 The server then computes:
+M2:=H(h(p) xor H(g) | H(salt1) | H(salt2) | g_a | g_b | k_b)
 
+Since we said that:
+s_b === s_a
+k_b === k_a
+This means, if everything was  done correctly,
+M1 === M2
+
+If the password isn't correct, 400 PASSWORD_HASH_INVALID will be returned
+
+Setting a new 2FA password
+
+To set a new password, use the SRP parameters and the KDF algorithm obtained using account.get_PAssword when generating 
+the password field. Then generate a new new_password_hash using the KDF algorithm specified in the new_settings, just
+append 32 sufficiently random bytes to the salt1, first. Proceed as for checking passwords with SRP, just stop at the
+generation of the v parameter, and use it as new_password_hash:
+b:=pow(g,x) mod p
+
+As usual in big endian form, padded to 2048 bits.
+
+Email verification
+When setting up two-factor authorization, it is recommended to set up a recovery email, to allow recovery of the password through
+the user's email address, in case they forget it.
+
+To set up a revocery email, it must first be verified. This can be done directly 
