@@ -67,5 +67,8 @@ Finally, the key exchange process starts on both parties
 The client computes as 2048-bit number a (using sufficient entropy or the server's random; see above) and generates:
 g_a:=pow(g,a) mod p
 
-The server computes a 2048
+The server computes a 2048-bit number b using sufficient entropy and generates the g_b parameter that was sent to us
+(see above)
+g_b:=(k_v+pow(g,b)mod p)) mod p
+
 
