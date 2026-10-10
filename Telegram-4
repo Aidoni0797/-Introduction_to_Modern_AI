@@ -17,4 +17,31 @@ specific KDF algorithm as shown below and pass it to appropriate method (e.g. au
 This extension of the SRP protocol uses the password-based PBKDF2 with 100000 iterations using sha512 (PBKDF2HMACSHA512iter100000).
 PBKDF2 is used to additionally rehash the x parameter, obtained using a method similar to the one described in RFC2945
 
-Here , denotes
+Here , denotes concatenation and + denotes the arthmetical operator +. In all cases where concetenation of numbers passed
+to hashing functions is done, the numbers must be used in big-endian form, padded to 2048 bits; all math is modulo 9. Instead
+of I, salt1 will be used. Instead  of s, salt2 will be used
+
+The main hashing function H is sha256:
+H(data):=sha256(data)
+
+The salting hashing function SH is defined as follows
+SH(data, salt):=H(salt|data|salt)
+The primary password hashing function is defined as follows:
+PH1(password, salt1, salt2):=SH(SH(password, salt1), salt2)
+
+The secondary password hashing function is defined as follows:
+PH2(password, salt1, salt2):=SH(pbfdf2(sha512, PH1(passwors, salt1, salt2), salt1, 100000), salt2)
+
+Client-side, the following parameters are extracted from the 
+g:=algo.g
+p:=algo.p
+The client is expected to check whether  p is a safe 2048-bit prime (meaning that both p and (p-1)/2 are prime, and that
+2^2047<<2^2048), and that g generates a cyclic subgroup of prime order (p-1)/2, i.e. is a quadratic residue mod p.
+Since g is always equal to 2,3,4,5,6 or 7 this is easily done using quadratic reciprocity law, yielding a simple condition
+on p mod 4g -- namely, p mod 8 =7 for g=2; p mod3=2 for g=3l no extra condition for g=4; p mod 5 =1 or 4 for g = 5; p mod 24 = 19 or
+23 for g = 6; and p mod 7 = 3, 5 or 6 for g = 7. After g and p have been chechked by the client, it  makes sense to cache
+the result, so as to avoid repeating lengthy computations in future. This cache might be shared with one used for
+Autorizaition Key generation.
+
+If the client has an inadequate random number generator, it makes sense to use 
+
