@@ -1,0 +1,20 @@
+Telegram-4
+Two-factor authentication
+Telegram uses the Secure Remote Password protocol version 6a to implement 2FA.
+Example implementation: tdlib
+
+Cheching the password with SRP
+To login to an account protected by a 2FA password or to perform some other actions (like changing channel owner), you will
+need to verify the user's knowledge of the current 2FA account password.
+
+To do this, first the client needs to obtain SRP parameters and the KDF algorithm to use to check the validity of the 
+password via account.getPassword method. For now, only the passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow
+algorithm is supported, se we'll only explain that.
+
+Then. after the user provides a password, the client should generate an InputCheckPAsswordSRP object using SRP and a
+specific KDF algorithm as shown below and pass it to appropriate method (e.g. auth.CheckPasswors in case of authorization).
+
+This extension of the SRP protocol uses the password-based PBKDF2 with 100000 iterations using sha512 (PBKDF2HMACSHA512iter100000).
+PBKDF2 is used to additionally rehash the x parameter, obtained using a method similar to the one described in RFC2945
+
+Here , denotes
