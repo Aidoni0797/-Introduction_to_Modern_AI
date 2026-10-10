@@ -134,4 +134,17 @@ Email verification
 When setting up two-factor authorization, it is recommended to set up a recovery email, to allow recovery of the password through
 the user's email address, in case they forget it.
 
-To set up a revocery email, it must first be verified. This can be done directly 
+To set up a revocery email, it must first be verified. This can be done directly when setting the new password using
+account.updatePasswordSettings by setting the email parameteer and flag in the account.passwordInputSettings constructor.
+If the email isn't verified, and EMAIL_UNCONFIRMED_X 400 error will be  returned, where X  is the length of the verification 
+code that was just sent to the email. Use account.confirmPAsswordEmail to enter the received verification code that was 
+just sent to the email. Use account.confirmPasswordEmail to enter the received verification code and enable the recovery 
+email. Use account.resendPasswordEmail to resend the carification code. Use account.cancelPasswordEmail ro cancel the verification
+code.
+
+To get the current recovery email, use account.getPAsswordSettings
+
+Password recovery
+If the user has forgetten their 2FA password, the following recovery options are available:
+- Logged-in sessions only: password reset
+- Logged-in and notlogged-in sessions: email recovery
