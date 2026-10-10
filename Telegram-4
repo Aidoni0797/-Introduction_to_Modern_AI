@@ -199,4 +199,18 @@ and then repeat the method call.
 - PASSWORD_TOO_FRESH_%d - The 2FA password was modified less than 24 hours ago, try again in %d seconds.
 - PASSWORD_TOO_FRESH_%d - This session was created less than 24 hours ago, try again in %d seconds.
 - SESSION_TOO_FRESH_%d - This session was created less than 24 hours ago, try again in %d seconds
-- PASSWORD_HASH_INVALID - The specified password is invalid (or an inputCheckPasswordEmpty was provided, but a 2FA)
+- PASSWORD_HASH_INVALID - The specified password is invalid (or an inputCheckPasswordEmpty was provided, but a 2FA
+password is required)
+
+The usual flow for invoking such methods is to first invoke the method passing an inputCheckPasswordEmpty (as if no
+password is configured, even if one is actually configured); then, according to the returned RPC error, proceed to:
+
+- PASSWORD_HASH_INVALID - The 2FA password insertion flow, the re-invoke the method with the user-provided password
+- PAsSWORD_MISSING - The 2FA password setup flow, then re-invoke the method with me newly provided password.
+- All other RPC errors - Show an error message with a description of the error
+
+This flow is useful to avoid race conditions with other currently logged-in sessions that may change the password.
+
+Related pagesa
+
+SRP design
