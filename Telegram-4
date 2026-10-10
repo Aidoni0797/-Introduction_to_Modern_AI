@@ -191,4 +191,12 @@ other logged-in session, the account can be deleted following these instructions
 
 Using 2FA password.
 Multiple methods in the API such as those used to make payments, transfer group/channel ownership and others require the user
-to authenticate
+to authenticate using the 2FA password passed as an InputCheckPasswordSRP constructor, generated as specified above.
+
+All such methods where a password verification is required after login may emit the following RPC errors:
+- PASSWORD_MISSING - No 2FA password is configured, but one is required in order to invoke the method. Set 2FA password 
+and then repeat the method call.
+- PASSWORD_TOO_FRESH_%d - The 2FA password was modified less than 24 hours ago, try again in %d seconds.
+- PASSWORD_TOO_FRESH_%d - This session was created less than 24 hours ago, try again in %d seconds.
+- SESSION_TOO_FRESH_%d - This session was created less than 24 hours ago, try again in %d seconds
+- PASSWORD_HASH_INVALID - The specified password is invalid (or an inputCheckPasswordEmpty was provided, but a 2FA)
