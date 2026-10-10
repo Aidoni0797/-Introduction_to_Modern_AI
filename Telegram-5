@@ -12,3 +12,7 @@ N - A large safe prime (N=2q+1, where q is prime)
 All arithmetic is done modulo N
 g - A generator modulo N
 k - Multipler parameter (k=)
+
+iDONi don't understand what is she write why write 
+Original SRP-1 Protocol Design
+SRP is the newest addition to new class of strong authentication protocols that resist a set 
