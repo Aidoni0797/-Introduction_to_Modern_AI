@@ -93,6 +93,21 @@ s_a:=pow(pow(g,b) mod p, a + u*x) mod p
 And:
 g_a:=pow(g,a) mod p
 v:=pow(g,x) mod p
-s_b:=pow(g_a*(pow(v,u) mod p))
+s_b:=pow(g_a*(pow(v,u) mod p), b) mod p
+s_b:=pow((pow(g,a) mod p)*(pow(pow(g,x) mod p, u) mod p), b) mod p
+s_b := pow(pow(g, a + x * u) mod p, b) mod p
+s_b := pow(pow(g, b) mod p, a + u * x) mod p
+s_a := pow(pow(g, b) mod p, a + u * x) mod p
 
+This means:
+s_b === s_a
+k_b === k_a
+
+Finally, as per SRP:
+M1 := H(H(p) xor H(g) | H(salt1) | H(salt2) | g_a | g_b | k_a)
+
+M1 is passed to inputCheckPasswordSRP, along with g_a (as A parameter) and the srp_id, extracted from the account.password
+object.
+
+The server then computes:
 
