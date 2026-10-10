@@ -71,4 +71,28 @@ The server computes a 2048-bit number b using sufficient entropy and generates t
 (see above)
 g_b:=(k_v+pow(g,b)mod p)) mod p
 
+Finally, the SRP session keys are generated:
+
+Client side:
+t:=(g_b-k_v) mod p (positive modulo, if the result is negative increment by p)
+s_a:=pow(t,a+u*x) mod p
+k_a:=H(s_a)
+
+Server side:
+s_b:=pow(g_a*(pow(v,u)mod p), b) mod p
+k_b:=H(s_b)
+
+Since:
+g_b:=(k_v+(pow(g,b) mod p)) mod p
+t:=(g_b-k_v) mod p
+t:=((k_v+(pow(g,b) mod p))-k_v) mod p
+t:=pow(g,b) mod p
+s_a:=pow(t,a+u*x) mod p
+s_a:=pow(pow(g,b) mod p, a + u*x) mod p
+
+And:
+g_a:=pow(g,a) mod p
+v:=pow(g,x) mod p
+s_b:=pow(g_a*(pow(v,u) mod p))
+
 
