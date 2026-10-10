@@ -18,4 +18,28 @@ To use this, you don't need to know anything about how our MTProto encryption pr
 handle all encryption and communication with the Telefram API for you. You communicate with this server via a simple HTTPS
 interface that offers a simplefied version of the Telegram API.
 
-But developers can also
+Bot developers can also make use of our Payments API to accept payments from Telegram users around the world.
+
+TDLib - build your own Telegram
+Even if you're looking for maximum customization, you don't have to create your app from scratch. Try our Telegram Database
+Library (or simply TDlLib), a tool for third-party developers that makes it easy to build fast,  secure and feature-rich  Telegram 
+apps.
+
+TDLib takes care of all network implementation details, encryption and local data storage, so that you can dedicate more time
+to design, responsive interface and beautiful animations.
+
+TDLib supports all Telegram feautures and makes developing Telegram apps a breeze on any platform. It can be used on Android,
+iOS, Windows, macOS, Linux and virtually any other system. The library is open source and comptible with virtually any programming
+language.
+
+Gateaway API
+The Telegram Gateway API allows any business, app or website to send authorization codes through Telegram instead of traditional
+SMS - offering a powerful and convenient way to lower costs while increasing the security and delivery speed of your codes to way
+Telegram;s 1 billion monthly active users. Users will instantly receive messages with codes in a special chat inside Telegram.
+
+Telegram API
+This API allows you to build your own customized Telegram clients. It is 100% open for all developers who wish to create Telegram
+applications an our platform. Feel free to study the open source code of existing Telegram applications for examples of how
+things work here. Don't to register your application in our system.
+
+
