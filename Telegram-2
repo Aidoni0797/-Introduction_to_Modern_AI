@@ -27,4 +27,8 @@ If you didn't violate the Terms of Service but your account does get banned afte
 explaining wht you intend to do with the API, asking to unban your account.
 Please note that emails are checked by a human, so automatically generated emails will be detected and banned.
 
-Using Telegram's open source
+Using Telegram's open source code
+Every is welcome to use our open source code. We have included a sample API id with the code. This API id is limited on the
+server side and is not suitable for apps released to end-users - using it for anything but testing purposes will result in the
+API_ID_PUBLISHED_FLOOD error for your users. It is necessary that you obtain your own API id before you publish your app.
+
