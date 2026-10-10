@@ -57,5 +57,15 @@ The final parameters are generated client-side only:
 x:=PH2(password, salt1, salt2)
 v:=pow(g,x) mod p
 
-The server already has v, from when we set
+The server already has v, from when we set the passworsd.
+
+A final shared param is generated, for commodity:
+k_v:=(k*v) mod p
+
+Finally, the key exchange process starts on both parties
+
+The client computes as 2048-bit number a (using sufficient entropy or the server's random; see above) and generates:
+g_a:=pow(g,a) mod p
+
+The server computes a 2048
 
