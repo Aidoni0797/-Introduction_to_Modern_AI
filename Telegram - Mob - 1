@@ -89,5 +89,12 @@ A 32-bit number equal to twice the number of content-related messages created by
 and subsequently incremented by one if the current message is a content-related message.
 
 The seqno of a content-related message is thus msg.seqNo = (current_seqno*2)+1 (and after generating it, the local current_seqno
-counter must be incremented by 1)
+counter must be incremented by 1), the seqno of a non-content related message is msg.seqNo = (current_seqno*2)
+(current_seqno must not be incremented by 1 after generation).
+
+thus, the content-relatedness of an incoming MTProto message can simply be determined by checking the value of the least-
+significant bit of the seqno of the message
+(message.isContentRelated = (message.seqNo & 1) == 1).
+
+A container is always generated after its entire contents; therefore, its sequence number
 
