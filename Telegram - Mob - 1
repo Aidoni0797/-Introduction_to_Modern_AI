@@ -70,5 +70,7 @@ Server Salt
 A (random) 64-bit number changed every 30 minutes (separately for each session) at the request of the server. All
 subsequent messages must contain the new salt (although, messages with the old salt are still accepted for a further 1800
 seconds). Required to protect against replay attacks and certain tricks associated with adjusting the client clock
-to a moment in the distant
+to a moment in the distant future.
+
+Message Identifie
 
