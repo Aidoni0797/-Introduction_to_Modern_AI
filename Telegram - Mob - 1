@@ -72,5 +72,7 @@ subsequent messages must contain the new salt (although, messages with the old s
 seconds). Required to protect against replay attacks and certain tricks associated with adjusting the client clock
 to a moment in the distant future.
 
-Message Identifie
+Message Identifier (msg_id)
+A (time-dependent) 64-bit number used uniquely to identify a message within a session. Client message identifiers are divisible
+by 
 
