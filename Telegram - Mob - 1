@@ -74,5 +74,6 @@ to a moment in the distant future.
 
 Message Identifier (msg_id)
 A (time-dependent) 64-bit number used uniquely to identify a message within a session. Client message identifiers are divisible
-by 
+by 4, server message identifiers modulo 4 yield 1 if the message is a response to a client message, and 3 otherwise.
+Client message identifiers points to the approximate
 
