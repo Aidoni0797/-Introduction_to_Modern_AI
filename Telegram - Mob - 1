@@ -45,3 +45,12 @@ device by exchanging Diffie-Hellman keys, and never transmitted over a network. 
 There is nothing that prevents a user from having several keys (that correspond to "permanent sessions" on different devices)
 and some of these may be locked forever in the event the device is lost. See also Creating an Authorization Key.
 
+Server Key
+A 2048-bit RSA key used by the server digitally to sign its own messages while registration is underway and the 
+authorization key is being generated. The application has a built-in public server key which can be used to verify 
+a signature but cannot be used to sign messages. A private server key is stored on the server and changed very 
+infrequently.
+
+Key Identifier (auth_key_id)
+The 64 lower-order bits of the SHA1 hash of the
+
