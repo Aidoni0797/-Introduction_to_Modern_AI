@@ -42,4 +42,5 @@ Teminology
 Authorization Key (auth_key)
 A 2048-bit key shred  by the client device and the server, created upon user registration directly on the client
 device by exchanging Diffie-Hellman keys, and never transmitted over a network. Each autorization key is user-specific.
-There is nothing that prevents a user from having several keys (that correspond to "permanent se")
+There is nothing that prevents a user from having several keys (that correspond to "permanent sessions" on different devices)
+and some of these may be locked forever in the event the device is lost. See also Creating
