@@ -26,4 +26,20 @@ Multipart messages are encrypted as a single message.
 
 Note 1
 Each plaintext message to be encrypted in MTProto always contains the following data to be chechked upon descryption in order 
-to make the system robust against known problems with
+to make the system robust against known problems with the components:
+
+- server alt (64-bit)
+- session id
+- messsage sequence number
+- message length
+- time
+
+Note 2
+Telegram's End-to-end encrypted Secret Chats are using an addtional layer of encryption on top of the described above.
+
+Teminology
+
+Authorization Key (auth_key)
+A 2048-bit key shred  by the client device and the server, created upon user registration directly on the client
+device by exchanging Diffie-Hellman keys, and never transmitted over a network. Each autorization key is user-specific.
+There is nothing that prevents a user from having several keys (that correspond to "permanent se")
