@@ -85,5 +85,5 @@ Important: to counter replay-attacks the lower 32 bits of msg_id passed by the c
 a fractional part of the time point when the message was created.
 
 Message Sequence Numbber (msg_seqno)
-A 32-bit number equal to twice the number of content-related messages created by the sender 
+A 32-bit number equal to twice the number of content-related messages created by the sender prior to this  message
 
