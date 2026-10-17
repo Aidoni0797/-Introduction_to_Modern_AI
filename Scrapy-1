@@ -85,5 +85,149 @@ of powerful features for making scraping easy and efficient, such as:
 with helper methods to extract using regular expressions.
 - An interactive shell console (IPython aware) for trying out the CSS and XPath expressions to scrape data, very useful when
 writing or debugging your spiders.
-- Built-in 
-,
+- Built-in support for generating feed exports in multiple formats (JSON, CSV, XML) and storing them in multiple backends 
+(FTP, S3, local filesystem)
+- Robust encoding support and auto-detection, for dealing with foreign, non-standard and broken ancoding declarations.
+- Strong extansibility support, allowing you to plug in your own functionality using signals and a well-defined API
+(middlewares, extensions, and pipelines).
+- Wide range of built-in extensions and middlewares for handling:
+- cookies and session handling
+- HTTP features like compression, authentication, caching
+- user-agant spoofing
+- robots.txt
+- crawl depth restriction
+- and more
+- A Telnet console for hooking into a Python console running inside your Scrapy process, to introspect and debug your crawler.
+- Plus other goodies like reusable spiders to crawl sites from Sitemaps and XML/CSV feeds, a media pipeline for
+automatically downloading images (or any other media) associated with the scraped items, a caching DNS resolver, and much
+more!
+
+2.1.3 What's next?
+
+The next steps for you are to install Scrapy, follow through the tutorial to learn how to create a full-blown Scrapy
+project and join the community. Thanks for your interest!
+
+2.2. Installation guide
+2.2.1 INstalling Scrapy
+Scrapy runs on Python 2.7 and Python 3.5 or above under CPython (default Python implementation) and PyPy (starting with PyPy 5.9).
+
+If you're using Anaconda or Miniconda, you can install the package from the conda-forge channel, which has up-to-date packages
+for Linux, Windows, OS X.
+To install Scrapy using conda, run:
+conda install -c conda-forge scrapy
+
+Alternatively, if you're already familiar with installation of Python packages, you can install Scrapy and its dependencies
+from PyPI with:
+pip install Scrapy
+
+Note that sometimes this may require solving compilation issues for some Scrapy dependencies depending on your system
+packages.
+For more detailed and platform specifies instructions, as well as troubleshooting information, read on.
+
+Things that are good to know
+
+Scrapy is written in pure Python and depends on a few key Python packages (among others):
+- lxml, an efficient XML and HTML parser
+- parsel, an HTML/XML data extraction library written on top of lxml
+- w3lib, a multi-purpose helper for dealing with URLs and web page encodings
+- twisted, an asynchronous networking framework
+- cryptography and pyOpenSSL, to deal with various network-level security needs
+
+The minimal versions which Scrapy is tested against are:
+- Twisted 14.0
+- lxml 3.4
+- pyOpenSSL 0.14
+
+Scrapy may work with older versions of these packages but it is not guaranteed it will continue working because it's
+not being tested against them.
+
+Some of these packages themselves depends on non-Python packages that might require additional installation steps depending
+on your platform. PLease check platform-specific guides below.
+
+In case of any trouble related to these dependencies, please refer to their  respective installation instructions:
+- lxml installation
+- cryptography installation
+
+Using a virtual environment (recommended)
+TL:DR: We recommend installing Scrapy inside a virtual environment on all platforms.
+
+Python packages can be installed either globally (a.k.a system wide), or in user-space. We do not recommend installing
+scrapy system wide.
+
+Intead, we recommend that you install scrapy within a so-called "virtual environment" (virtualenv). Virtualens allow you
+to not conflict with already-installed Python system packages (which could break some of your system tools and scripts)
+and still install packages normally with pip (without sudo and the likes).
+
+To get started with virtual environments, see virtualenv installation instructions. To install it globally (having it
+globally installed actually helps here), it should be a matter of runnig:
+
+Check this user guide on how to create your virtualenv.
+Note: If you use Linux or OS, X, virtualenvwrapper is a handy tool to create virtualenvs.
+
+Once you have created a virtualenv, you can install scrapy inside it with pip, just like any other Python package
+
+Python virtualenvs can be created to use Python 2 by default, or Python 3 by default
+- If you want to install scrapy with Python 3, install scrapy within a Python 3 virtualenv.
+- And if you want to install scrapy with Python 2, install scrapy within a Python 2 virtualenv,
+
+2.2.2 Platform specific installation notes
+
+Windows 
+Though it's possible to install Scrapy on Windows using pip, we recommend you to install Anaconda or Miniconda and use
+the package from the conda-forge channel, which will avoid most installation issues
+
+Once you've installed Anaconda or Miniconda, install Scrapy with:
+conda install -c conda-forge scrapy
+
+PyPy
+
+We recommend using the latest PyPy version. The version tested is 5.9.0. For PyPy3, only Linux installation was tested.
+
+Most scrapy dependencides now have binary wheels for CPython, but not for PyPy. This means that these dependecies will be
+built during installation. On OS X, you are likely to face an issue with bulding Cryptography dependency, solution to this
+problem is described here, that is to brew install openssl and then export the flags that this command recommends 
+(only needed when installing scrapy). INstalling on Linux has no special issues besides installing build dependecies.
+Installing scrapy with PyPy on Windows is not tested.
+
+You can check that scrapy is installed correctly by running scrapy bench. If this command gives errors such as
+TypeError: ... got 2 unexpected keyword arguments, this means that setuptools was unable to pick up one PyPy-specific
+dependency. To fix this issue, run pip install 'PyPyDespatcher>=2.1.0'.
+
+2.2.3 Troubleshooting
+
+AttributeError: 'module' object has no attribute 'OP_NO_TLSv1_1'
+After you install or upgrade Scrapy, Twisted or pyOpenSSL,  you may get an expection with the following traceback:
+
+The reason you get this expection is that your system or virtual environment has a version of pyOpenSSL that your version
+of Twisted does not support.
+
+To install a version of pyOpenSSL that your version of Twisted supports, reinstall Twisted with the tls extra option:
+pip install twisted[tls]
+
+For details.
+
+2.3 Scrapy Tutorial
+
+In this tutorial, we'll assume that Scrapy is already installed on your system. If that's not the case, see Installation 
+guide.
+
+We are going to scrape quots.toscrape.com, a website that lists quotes from famous authors.
+This tutorial will walk you through these tasks:
+1. Creating a new Scrapy project
+2. Writing a spider to crawl a site and extract data
+3. Exporting te scraped data using the command line
+4. Changing spider to recursively follow links
+5. Using spider arguments
+
+Scrapy is written in Python. If you're new to the language you might want to start by getting an idea of what the language
+is like, to get the most out of Scrapy.
+
+If you're already familiar with other languages, and wantto learn Python quickly, the Python Tutorial is a good resource.
+
+If you're new to programming and want to start with Python, the following books may ne useful yo you:
+- Automate the Boting Stuff With Python
+- How To Think Like a Computer Scientist
+- Leanr Python3 The Hard Way
+
+You can also take a look at this list of Python resources for non-programmers, as well as the suggested resources in the learnpython-subreddit
+
