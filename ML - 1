@@ -276,4 +276,10 @@ h1 = f(w1*x1+w2*x2+b1)=f(-2+-1+0)=0.0474
 h2 = f(w3x1+w4x2+b2)=0.0474
 o1 = f(w5h1+w6h2+b3=f(0.0474+0.0474+0))=0.524
 
-Выдачи нейронной сети ypred = 0.524. Это дает 
+Выдачи нейронной сети ypred = 0.524. Это дает нам слабое представление о том, рассматривается мужчина Male(0), или 
+женщина Female (1). Давайте подсчитаем sigmaL/sigmaw1
+
+
+sigmaL/sigmaw1 =  sigmaL/sigmaypred*sigmaypred/sigmah1*sigmah1/sigmaw1
+sigmaL/sigmaypred=-2*(1-ypred)=-2*(1-0.524)=-0.952
+
