@@ -72,4 +72,18 @@ handling it.
 
 While this enables you to do very fast crawls (sending multiple concurrent requests at the same time, in a fault-tolerant way)
 Scrapy also gives you control over the politeness of the crawl through a few settings. You can to things like setting a
-download delay 
+download delay between each request, limiting amount of concurrent requests per domain or per IP, and even using an auto-
+throttling extension that tries to figure out these automatically.
+
+Note: This is using feed exports to generate the JSON file, you can easily change the export format (XML or CSV, for example)
+or the storage backend (FTP or Amazon S3, for example). You can also write an item pipeline to store the items in a database.
+
+2.1.2 What else?
+You've seen how to extract and store items from a website using Scrapy, but this is just the surface. Scrapy provides a lot
+of powerful features for making scraping easy and efficient, such as:
+- Built-in support for selecting and extracting data from HTML/XML sources using extended CSS selectors and XPath expressions,
+with helper methods to extract using regular expressions.
+- An interactive shell console (IPython aware) for trying out the CSS and XPath expressions to scrape data, very useful when
+writing or debugging your spiders.
+- Built-in 
+,
