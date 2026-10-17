@@ -103,4 +103,36 @@ o1 = f(w*[h1,h2]+b)=f((0*h1)+(1*h2)+0)=f(0.9526)=0.7216
 
 import numpy as np
 
-class OurNeuralNetworfL
+class OurNeuralNetwork:
+  def __init__(self):
+    weights = np.array([0,1])
+    bias = 0
+
+    self.h1 = Neuron(weights, bias)
+    self.h2 = Neuron(weights, bias)
+    self.o1 = Neuron(weights, bias)
+
+  def feedforword(self, x):
+    out_h1 = self.h1.feedforword(x)
+    out_h2 = self.h2.feedforword(x)
+
+    out_o1 = self.o1.feedforword(np.array([out_h1, out_h2]))
+
+    return out_o1
+
+netwoork = OurNeuralNetwork()
+x = np.array([2,3])
+print(network.feedforword(x)) #0.7216325609518421
+
+Мы вновь получили 0.7216. Похоже, все работет
+
+Пример тренировки нейронной сети - минимазация потерь, Часть 1
+Преоложим, у нас есть следующие параметры:
+Alice - 133 - 65 - F
+Bob - 160 - 72 - M
+Charlie - 152 - 70 - M
+Diana - 120 - 60 - F
+
+Давайте натренируем нейронную сеть таким образом, чтобы она предсказывала пол заданного человека в зависимости от его веса и 
+роста.
+
