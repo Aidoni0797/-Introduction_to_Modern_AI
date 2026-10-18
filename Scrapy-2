@@ -80,4 +80,28 @@ from an HTML  page.
 2. Direct DataFrame conversion: Extracted tables are immediately converted into pandas DataFrames, 
 ready for further analysis or manipulation.
 
-3. Handling multiple tables: If a page contains
+3. Handling multiple tables: If a page contains multiple tables, read_html() returns a list of DataFrames,
+one for each table found.
+
+Here's an example of how to use pandas to scrape an HTML table:
+
+import pandas as pd
+
+url = 'https://example.com/table_page'
+tables = pd.read_html(url)
+
+df = tables[0]
+
+This method is particularly useful when dealing with well-structured  HTML tables, as it eliminates the need
+for manual parsing and data extraction.
+
+Selenium: Dynamic Content and Interaction
+
+While BeautifulSoup and pandas are excellent for static HTML content, many modern websites use
+JavaScript to dynamically load table data. In such cases, Selenium becomes an invalauable tool for
+web scraping HTML tables (Selenium Documentation).
+
+Selenium's key features for table scraping include:
+
+1. Browser automation: Selenium can interact with web pages as a user would, including clicking 
+buttons and scrolling, which is crucial for 
