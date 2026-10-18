@@ -67,4 +67,17 @@ scraping toolkit.
 
 Pandas: Streamlined Table Extraction
 
-Pandas,
+Pandas, primarily known for data manipulation and analysis, also offers a convenient method for
+scraping HTML tables directly into DataFrame objects. This functionality is provided through the
+read_html() function,  which can significantly simplify the process of extracting tabular data
+from web pages (Pandas Documentation).
+
+Key advantages of using pandas for HTML table scraping include:
+
+1. Automatic table detection: The read_html() function can automatically identify and extract all tables
+from an HTML  page.
+
+2. Direct DataFrame conversion: Extracted tables are immediately converted into pandas DataFrames, 
+ready for further analysis or manipulation.
+
+3. Handling multiple tables: If a page contains
