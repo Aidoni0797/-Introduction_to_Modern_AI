@@ -173,4 +173,12 @@ When choosing a tool or library for scraping HTML tables, consider the following
 1. Project complexity: For simple, one-off scraping tasks, pandas or BeautifulSoup might be
 sufficient. For more complex projects involving multiple pages or websites, Scrapy or Selenium might
 be more approprate.
-2. Table structure:
+2. Table structure: Well-structured static tables can be easily handled by pandas or BeautifulSoup. For
+dynamically loaded or complex tables, Selenium might be necessary,
+3. Scale: For large-scale scraping projects, Scrapy's asynchronous processing and built-in piplines
+can offer significant performance advantages.
+4. Learning curve: BeautifulSoup and pandas are generally easier to  learn and use for beginners, while
+Scrapy and Selenium might require more time to master.
+5. Integration needs: Consider how the scraped data will be used. Pandas offers seamless integration provides
+robust options for data storage and processing.
+By carafully evaluating these 
