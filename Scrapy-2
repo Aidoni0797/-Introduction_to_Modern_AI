@@ -128,4 +128,8 @@ EC.presence_of_element_located((By.TAG_NAME, "table"))
 
 rows = table.find_elements(By.TAG_NAME, "tr")
 forrow in rows:
-  cols = row.
+  cols = row.find_elements(By.TAG_NAME, "td")
+
+driver.quit()
+
+Selenium's ability to interact with web
