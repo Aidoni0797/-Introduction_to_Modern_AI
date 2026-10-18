@@ -220,4 +220,12 @@ This code sends a GET request to the specified URL and stores the HTML content o
 html_content variable. It's important  to handle potential errors, such as network issues or
 invalid URLs, by implementing appropriate error handling mechanisms
 
-Parsing
+Parsing the HTML with BeautifulSoup
+
+Once you have the HTML content, use BeautifulSoup to parse it and create a structured representation
+of the document:
+
+soup = BeautifulSoup(html_content, 'html.parser')
+
+This creates a BeautifulSoup object that allows you to navigate and search the HTML structure easily.
+The 'html.parser' argument specifies the parser to use
