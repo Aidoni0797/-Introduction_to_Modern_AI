@@ -104,4 +104,26 @@ web scraping HTML tables (Selenium Documentation).
 Selenium's key features for table scraping include:
 
 1. Browser automation: Selenium can interact with web pages as a user would, including clicking 
-buttons and scrolling, which is crucial for 
+buttons and scrolling, which is crucial for accessing dynamically loaded content.
+
+2. JavaScript execution: It can handle pages where table data is populated via JavaScript,
+ensuring you capture the complete dataset.
+
+3. Wait functionality: Selenium provides methods to wait for specific elements to load before
+scraping, ensuring you don't miss any data.
+
+Here's a basic example of using Selenium to scrape a table from a dynamic web page:
+
+from selenium impoer webdrive
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.Chrome()
+driver.get('https://example.com/dynamic_table_page')
+
+table = WebDriverWait(driver, 10).until(
+EC.presence_of_element_located((By.TAG_NAME, "table"))
+)
+
+rows
