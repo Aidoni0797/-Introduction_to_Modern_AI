@@ -238,3 +238,4 @@ represented by the <table> tag in HTML. Use BeautifulSoup's methods to find the 
 table = soup.find('table', {'id':'target-table'})
 
 This code searches
+https://scrapingant.com/blog/python-scrape-html-tables
