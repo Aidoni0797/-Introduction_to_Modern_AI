@@ -217,4 +217,7 @@ response = requests.get(url)
 html_content = response.text
 
 This code sends a GET request to the specified URL and stores the HTML content of the page in the
-html_content variable. It's
+html_content variable. It's important  to handle potential errors, such as network issues or
+invalid URLs, by implementing appropriate error handling mechanisms
+
+Parsing
