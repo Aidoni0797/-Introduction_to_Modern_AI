@@ -185,4 +185,28 @@ By carafully evaluating these factors, you can select the most appropriate tool 
 of tools for your specific HTML table scraping needs. Remember that these tools can often be used
 in combination to leverage their respective strengths and create powerful web scraping solutions.
 
-Step-by-Step Guide to scraping HTML T
+Step-by-Step Guide to scraping HTML Tables
+Preparing the Python Environment
+
+To begin scraping HTML tables, it's essential to set up the proper Python environment. First, ensure
+you have Python installed on your system (version 3.x is recommended). Then, install the necessary 
+libraries using pip, the Python package manager. Open your terminal or command prompt and run  the
+following commands:
+pip install requests
+pip install beautifulsoup4
+pip install pandas
+
+These commands will install the requests library for sending
+HTTP requests, the beautifulsoup4 library for parsing HTML content, and the pandas library for data manipulation
+and analysis (Python Package Index).
+
+Next, create a new Python file and import the required modules:
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+With these preparations complete, you're ready to start scraping HTML tables.
+
+Fetching the HTML Content
+
+The first step  in scraping and HTML table is 
