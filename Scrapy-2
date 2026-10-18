@@ -209,4 +209,4 @@ With these preparations complete, you're ready to start scraping HTML tables.
 
 Fetching the HTML Content
 
-The first step  in scraping and HTML table is 
+The first step  in scraping and HTML table is to fetch the web page containing the table. Use 
