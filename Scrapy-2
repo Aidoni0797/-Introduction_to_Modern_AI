@@ -228,4 +228,13 @@ of the document:
 soup = BeautifulSoup(html_content, 'html.parser')
 
 This creates a BeautifulSoup object that allows you to navigate and search the HTML structure easily.
-The 'html.parser' argument specifies the parser to use
+The 'html.parser' argument specifies the parser to use, though you can also use other parsers
+like 'lxml' for potentially faster parsing.
+
+Locating and Extracting the Table 
+To extract the desired table, you need to locate it within the HTML structure. Tables are typically
+represented by the <table> tag in HTML. Use BeautifulSoup's methods to find the table:
+
+table = soup.find('table', {'id':'target-table'})
+
+This code searches
