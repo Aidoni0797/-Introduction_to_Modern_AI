@@ -165,4 +165,12 @@ class TableSpider(scrapy.Spider):
         }
 
 Scrapy's power lies in its ability to handle complex scraping tasks efficiently, making it an 
-excellent choice for projects that go beyond simple table 
+excellent choice for projects that go beyond simple table extraction.
+
+Comparison and Selection Guide
+
+When choosing a tool or library for scraping HTML tables, consider the following factors:
+1. Project complexity: For simple, one-off scraping tasks, pandas or BeautifulSoup might be
+sufficient. For more complex projects involving multiple pages or websites, Scrapy or Selenium might
+be more approprate.
+2. Table structure:
