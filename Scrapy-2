@@ -55,4 +55,16 @@ url = 'https://example.com/table_page'
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
-table = soup.find('')
+table = soup.find('table')
+rows = table.find_all('tr')
+
+for row in rows:
+  cols = row.find_all('td')
+
+While BeautifulSoup is excellent forparsing HTML, it's often used in conjuction with other libraries
+like requests for fetching web pages and pandas for data manipulation, xcreating a powerful web
+scraping toolkit.
+
+Pandas: Streamlined Table Extraction
+
+Pandas,
