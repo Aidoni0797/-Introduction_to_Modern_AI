@@ -209,4 +209,12 @@ With these preparations complete, you're ready to start scraping HTML tables.
 
 Fetching the HTML Content
 
-The first step  in scraping and HTML table is to fetch the web page containing the table. Use 
+The first step  in scraping and HTML table is to fetch the web page containing the table. Use  the
+requests library to send an HTTP GET request to the target URL:
+
+url = 'https://example.com/page-with-table'
+response = requests.get(url)
+html_content = response.text
+
+This code sends a GET request to the specified URL and stores the HTML content of the page in the
+html_content variable. It's
