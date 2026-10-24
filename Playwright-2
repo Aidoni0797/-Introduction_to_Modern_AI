@@ -100,5 +100,28 @@ test('example test', async ({page})=> {
 // page принаддежит изолированному контекству браузера, созданному для этого конкретного теста
 });
 
-test('another test', async())
+test('another test', async({page})=>{
+// page во втором тесте полностью изолирован от первого теста
+});
+
+Использование хуков тестов
+
+Вы можете использовать различные хуки тестов, такие как test.describe, чтобы объявить группу тестов, и test.beforeEach
+и test.afterEach, которые выполняются перед/после каждого теста. Другие хуки включают test.BeforeAll test.afterAll,
+которые выполняются один раз для каждого рабочего процесса перед/после всех тестов.
+
+tests/example.spec.ts
+
+import {test, expect} from '@playwright/test';
+
+test.describe('navigation', ()=>{
+test.beforeEach(async ({page})=>{
+await page.goto('https://playwright.dev/');
+});
+
+test('main navigation', async({page})=>{
+await expect(page).toHaveURL('https://playwright.dev/');
+});
+});
+
 
