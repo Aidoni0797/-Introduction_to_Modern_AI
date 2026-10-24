@@ -1,0 +1,64 @@
+Playwright-2
+Написание тестов
+Введение
+Тесты PLaywright просты: они выполняют действия и проверяют состояние на соответствие ожиданиям.
+Playwright автоматически ждёт происхождения проверок actionability перед выполнением каждого действия. Вам не нужно
+добавлять ручные ожидания или бороться с гонками (race conditions). Ассерты Playwright устроены так, чтобы описывать
+ожидания, которые со временем будут выполнены, устраняя нестаильные таймауты и проверки на гонках.
+Вы узнаете
+- Как напистаь первый тест
+- Как выполнять действия
+- Как использовать утверждения
+- Как тесты выполняются изолированно
+- Как использовать хуки тестов
+
+Первый тест
+Просмотрите на следующий пример, чтобы увидеть, как написать тест.
+
+tests/example.spec.ts
+
+import {test, expect} from '@playwright/test';
+
+test('has title', async ({page})=>){
+await page.goto('https://playwright.dev/');
+await expect(page).toHaveTitle(/Playwright/);
+});
+
+test('get started link',async({page})=>{
+await page.goto ('https://playwright.dev/');
+await page.getByRole('link',{name:'Get started'}).click();
+await expect(page.getByRole('heading',{name:'Installation'})).toBeVisible();
+});
+
+Примечание 
+Добавьте //@ts-check в начале каждого тестового файла при использвоании JavaScript in VS Code, чтобы получить автоматическую
+проверку типов.
+
+Действия
+Навигация
+Большинство тестов начинаются с перехода по URL. После этого тест взаимодейтсвует с элементами страницы.
+await page.goto('https://playwright.dev/');
+Playwright ждёт, пока страница достигнет состояния загрузки (load state), прежде чем продолжить. Подробнее од опциях
+page.goto()
+
+Взаимодействия
+Выполнение действий начинается с поиска элементов. Для этого Playwright использует Locators API. Локаторы - это способ 
+находить элементы на странице в любой момент времени. Подробнее о доступных разных типах локаторов.
+
+Перед выполненеим действия Playwright ждет, пока элемент станет actionable, поэтому вам не нужно вручную ждать, пока
+он станет доступен
+const getStarted = page.getByRole('link'),{name:'Get started'});
+await getStarted.click();
+
+В большинстве случаев это будет записано в одну строку:
+await page.getByRole('link', {name: 'Get started'}).click();
+
+Основные действия 
+Вот самые популярные действия Playwright. Полный список в разделе Locator API.
+locator.check() - установить флажок в поле ввода
+locator.click() - нажать на элемент
+locator.uncheck() - снять флажок с поля ввода
+locator.hover() - навести курсоор на элемент
+locator.fill() - заполнить поле формы, ввести текст
+locator.focus() - установить фокус на элемент
+locator.press() - нажать на 
