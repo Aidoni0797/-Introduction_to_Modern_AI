@@ -72,4 +72,9 @@ locator.selectOption() - Выбрать опцию в выпадающем сп�
 await expect(page).toHaveTitle(/Playwright/);
 
 Вот самые популярные асинхронные ассерты. полный список в рукосодвте с ассертами
-expe
+expect(locator).toBeshecked() - флажок установлен
+expect(locator).toBeEnabled() - элемент включен
+expect(locator).toBevisible() - элемент видим
+expect(locator).toHaveAttribute() - элемент имеет атрибут
+expect(locator).toJaveCount() - список элементов имеет заданную длину
+expect(locator).
