@@ -76,5 +76,8 @@ expect(locator).toBeshecked() - флажок установлен
 expect(locator).toBeEnabled() - элемент включен
 expect(locator).toBevisible() - элемент видим
 expect(locator).toHaveAttribute() - элемент имеет атрибут
-expect(locator).toJaveCount() - список элементов имеет заданную длину
-expect(locator).
+expect(locator).toHaveCount() - список элементов имеет заданную длину
+expect(locator).toHAveText() - элемент соответствует тексту
+expect(locator).toHaveValue() - элемент ввода имеет значение
+expect()
+
