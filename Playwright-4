@@ -56,4 +56,21 @@ npx playwright test landing-page.spec.ts
 
 npx playwright test tests/todo-page/ tests/landing-page/
 
-Чтобы запустить файлы, содержащие landing
+Чтобы запустить файлы, содержащие landing или login в имени файла, просто передайте эти ключевые слова в CLI.
+
+npx playwright test landing login
+
+Чтобы запустить тест с определенным заголовком, используйте флаг -g, за которым следует заголовок теста.
+
+npx playwright test -g "add a todo item"
+
+Запуск последних неудачных тестов
+
+Чтобы запустить только те тесты, которые не прошли в последнем запуске тестов, сначала запустите ваши тесты, а затем
+запустите их снова с флагом --last-failed.
+
+npx playwright test --last-failed
+
+Запуск тестов в VS Code
+
+Тесты можно запускать прямо из VS Code с помощью расширения VS Code. После установки достаточно нажать на зеленый
