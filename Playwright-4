@@ -44,4 +44,16 @@ npx playwright test --project webkit
 
 Чтобы запускать тесты в нескольких браузерах, используйте флаг --project несколько раз, каждый раз указывая имя браузера.
 
-npx playwright test --rpo
+npx playwright test --project webkit --project firfox
+
+Запуск конкретных тестов
+
+Чтобы запустить один файл с тестами, передайте имя тестового файла, который вы хотите выполнить
+
+npx playwright test landing-page.spec.ts
+
+Чтобы запустить набор тестовых файлов из разных директорий, передайте имена директорий, в которых вы хотите запускать тесты.
+
+npx playwright test tests/todo-page/ tests/landing-page/
+
+Чтобы запустить файлы, содержащие landing
