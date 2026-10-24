@@ -79,5 +79,26 @@ expect(locator).toHaveAttribute() - элемент имеет атрибут
 expect(locator).toHaveCount() - список элементов имеет заданную длину
 expect(locator).toHAveText() - элемент соответствует тексту
 expect(locator).toHaveValue() - элемент ввода имеет значение
-expect()
+expect(locator).toHaveTitle() - У страницы  есть заголовок
+expet(page).toHAveURL() - У страницы есть URL
+
+В Playwright также есть универсальные матчеры вроде toEqual, toContain, toBeTruthy, которые можно использовать для проверки
+любых условий. Эти проверки не используют await, так как выполняют немедленные синхронные проверки уже доступных
+значений.
+
+expect(success).toBeTruthy();
+
+Изоляция тестов
+Playwright Test основан на концепции тестовых фиксту, например встроенной фикстуры page, которая передаётся в ваш тест. Страницы 
+изолированы между тестами благодаря Browser Context, который эквивалентен совершенно новому профилю браузера. Каждый тест
+получает чистое окружение - даже когда несколько тестов выполняются в одном браузере.
+test/example.spec.ts
+
+import {test} from '@playwright/test';
+
+test('example test', async ({page})=> {
+// page принаддежит изолированному контекству браузера, созданному для этого конкретного теста
+});
+
+test('another test', async())
 
