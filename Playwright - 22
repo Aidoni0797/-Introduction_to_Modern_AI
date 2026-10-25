@@ -2,4 +2,19 @@ Playwright - 22
 
 Hi, welsome to Chapter 2.
 
-In this chapter, we are going to see the playwright.config.ts file - the file that has many of the options to
+In this chapter, we are going to see the playwright.config.ts file - the file that has many of the options to configure
+how the tests are going to run in your test project.
+
+Also, how the test runner commands are created and the package.json scripts to make your typing easier.
+
+And finally, writing your first test. I hope you enjoy it.
+
+UNderstanding the Playwright config
+
+The first file we are going to see is the playwright.condig.ts. This file has all the configurations for the tests that we
+are going to implement in our project.
+
+The first line has the first import.
+
+It comes from @playwright/test, and it has  the defineConfig, which is the object with all the configurations and the 
+devices that we run the tests on - the browsers or the mobile devices - if we need.
