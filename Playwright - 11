@@ -37,4 +37,21 @@ complete framework.
 
 Another important menu item is Gudes.
 
-Here, you'll find 
+Here, you'll find guidance for many of the features that Playwright offers to you.
+I invite you to take a look at the Best Practices option.
+
+On the right side, you can navigate easily through the main topic and getting to know the framework best practices is
+extremely important to optimize the test execution and increase th code maintainability.
+
+So ultimately, it's up to you to decide if you follow best practices or not, but it's important to know why they are
+there.
+
+Lastly, you can also find a few options to migrate your code from one framework to another here under Migration, and
+how to integrate your framework with third parties or not, but it's important to know why they are there.
+
+Lastly, you can also find a few options to migrate your code from one framework to another here under Migration, and how 
+to integrate your framework with third parties such as Docker, Selenium Grid, or any continous integration under
+Integrations.
+Another great feature that we have here in the documentation is the search.
+
+For example, 
