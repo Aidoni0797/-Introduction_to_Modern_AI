@@ -140,4 +140,10 @@ Make sure, if you want to see your tests are under this folder
 
 For now, let's go ahead and run the tests by clicking on this button and you see that the test will be executed.
 
-Another way of executing the test is by going to the Terminal which you can enable by clicking on this icon
+Another way of executing the test is by going to the Terminal which you can enable by clicking on this icon or using these 
+commands.
+
+Here you can type:
+npx playwright test
+
+The test will run as well. In this case, we are runnig it thoourgh the Terminal
