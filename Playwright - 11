@@ -73,3 +73,65 @@ But let's say  I'm interested in something else about the click.
 I can come here again, and for example, let's go to the class.
 
 Here you see how it works, the usage of it and the arguments.
+
+You can see for example, if you want to add a delay to your click, for example, click and hold for a few seconds, that's
+how to use it.
+
+The search is an excellent tool so make sure you use it for any questions you have for anything related to your coding
+practices.
+
+Setting up and installing PLaywright.
+
+Now that we already learned how to use the documentation, our next step is to install PLaywright. If you are ready, open
+your Terminal and let the fun begin.
+
+Now that you have your Terminal  open, go to the folder of your desire and type:
+
+npm init playwright@latest
+
+This will install the latest version of PLaywright.
+
+The first question is what language we want to use
+
+We'll go ahead and hit enter for TypeScript, which is the default one.
+
+The second question is where you put your end-to-end tests.
+
+We'll go ahead and leep the default, which is tests, and hit Enter.
+
+It asks if you want to add a Github Actions workflow. For this training, we are not going through that, so we hit Enter
+one more time for false.
+
+The last question is if you want to install the browsers - we'll go ahead and hit Enter one more time for yes.
+
+It will download and install the browsers and PLaywright, and at the end you'll see a success message.
+
+Next, you see a few useful commands. For example, if you want to run the test, you can type npx playwright  test.
+
+That will run the test that you added to your project.
+
+It creates by defaults a few as examples that we can take a look at later, and also it links you to the
+documentation one more time.
+
+Now that we jave Playwright installed, let's go ahead and open the IDE.
+
+We are going to type code. in the Terminal and VS Code is going to open for us.
+
+Here we can see that some folders were created. We have an example file here, and another example here, and a few other
+files.
+
+We are going to see more about them in a little bit, but for now, let's go ahead and go to the Extensions tab and type
+playwright.
+
+There are few options available - let's make sure we select the one from Microsoft
+
+Here you can see the details about the extension and let's go ahead and install it.
+
+Once installed, we are going to see the icon on the left side.
+
+We can come here, and you notice a few options. You can run all the tests through this menu.
+
+And there are a few other options - you can filter the list of tests available for this project.
+
+One thing that is important to notice is, all the tests that are going to be displayed here will be linked to the test
+directory listed here in this Playwright config file.
