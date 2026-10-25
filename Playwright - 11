@@ -1,0 +1,30 @@
+Playwright - 11
+
+Hi, welcome to chapter one.
+
+In this chapter, we are going to learn how to keep up-to-date with Playwright news, how to use the Playwright documentation
+through the menus, how to use the Playwright documentation through the search feature, how to install Playwright, and how
+to run the tests. I hope you like it.
+
+Explore and Learn about Playwright
+
+As we start learning, one extremely important resource is the Playwright website.
+
+Here, you can find everything to be self-sufficient in your studies and to keep up-to-date with the framework evelution.
+
+Make sure you select the right language for the documentation.
+
+In this training, we are using Node.js, which is already the default language.
+
+A highlight is the Discord channel where you can connect to the community and get help if you need.
+
+Scrolling all the way down to the footer, you will find a few more links that can be useful.
+
+Another hightlight is the YouTube channel you can get a lot of great content from the specialists, and the GitHub page
+where you can Star the project and Watch in order to get notifications in your email about the releases or anything related 
+to that.
+
+Here in the Releases part, you'll see the  release notes with new features, bug fixes, and also breaking changes, so it's
+important to keep an eye on that.
+
+Back to the website, we have access to the docs, and here we have
