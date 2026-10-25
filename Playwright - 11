@@ -149,4 +149,6 @@ npx playwright test
 The test will run as well. In this case, we are runnig it thoourgh the Terminallikek this one, and you can see the results
 here.
 
-If you want to open the report, you can 
+If you want to open the report, you can easily type this command, and a browser will open the results.
+
+Again, we'll see more 
