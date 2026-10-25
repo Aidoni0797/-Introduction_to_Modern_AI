@@ -135,3 +135,9 @@ And there are a few other options - you can filter the list of tests available f
 
 One thing that is important to notice is, all the tests that are going to be displayed here will be linked to the test
 directory listed here in this Playwright config file.
+
+Make sure, if you want to see your tests are under this folder
+
+For now, let's go ahead and run the tests by clicking on this button and you see that the test will be executed.
+
+Another way of executing the test is by going to the Terminal which you can enable by clicking on this icon
