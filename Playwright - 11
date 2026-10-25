@@ -54,4 +54,22 @@ to integrate your framework with third parties such as Docker, Selenium Grid, or
 Integrations.
 Another great feature that we have here in the documentation is the search.
 
-For example, 
+For example, If I want to know how click works - you have Guides, you have Classes, you have Getting started - so you have
+a lot of information related to the click function.
+
+Let's see what this first one gives to us.
+
+You can see that here is a Mouse click - it performs a simple, human click.
+
+Here are a few options on how to use it with getByRole('button').click().
+
+You can use getByText with double click.
+
+You can also use a right button click with modifiers Shift and etc. and you can understand under the hood how exactly this
+function works, and a course, a few examples.
+
+But let's say  I'm interested in something else about the click.
+
+I can come here again, and for example, let's go to the class.
+
+Here you see how it works, the usage of it and the arguments.
