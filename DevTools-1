@@ -9,4 +9,32 @@ What is DevTools?
 Devtools provides:
 
 Visual Flow Builder: Create API  test workflows using a drag-and-drop interface
-HAR import: Record browser interactions and convert 
+HAR import: Record browser interactions and convert them into executable test flows
+CLI Tool: Run flows from the command line for CI/CD integration
+Variables&Environments: Manage configuration across dev, staging, and production
+Data Flow Mapping: Automatically chain API requests with response data
+
+Key Features 
+
+Studio Application
+
+Build and test API flows with and intuitive visual interface
+- Create HTTP requests with full header, body, and parameter support
+- Chain requests together using response data
+- Add conditional logic, loops, and custom Javascript transformations
+- Organize requests by domain and workspace
+
+CLI Tool
+
+Execute flows from the terminal for automation and CI/CD
+- Run YAML-defined flows with the devtools command
+- Generate JUnit and JSON reports for CI systems
+- Use environment variables for secrets and configuraaitons
+- Integrate with GitHub Actions, GitLab CI, Jenkins, andmore
+
+Flow-Based Testing
+
+Design complex API test scenarios:
+- Visual dependency graphs showing request execution oreder
+- Automatic variable extraction from API responses
+- JavaScript  nodes for custom data 
