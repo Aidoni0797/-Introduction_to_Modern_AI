@@ -1,0 +1,52 @@
+DevTools-4
+
+Importing HAR Files and API COllections
+
+DevTools makes it easy to import API requests from various sources, including browser recordings (HAR files) and cURL
+commands. This guide shows you how to import and work with these formats.
+
+What is a HAR File?
+
+HAR (HTTP Archive) is a JSON-based format that records all HTTP interactions between a browser and a website. It captures:
+- Complete request details (URL, method, headers, body)
+- Full response data (status, headers, body, timing)
+- Cookies and cache information
+- Performance timing data
+
+Use Cases:
+- Record real user workflows to reply later
+- Capture authentication flows
+- Document API interactions from existing applications
+- Share API examples with your team
+
+Recording HAR Files
+
+Using Chrome DevTools
+
+1. OPen Chrome DevTools(F12 or Cmd+Opt+I on Mac)
+2. Got to the Network tab
+3. Click the gear icon to open settings
+4. In Preferences - Network, enable Allow to generate HAR with sensitive data
+5. Back in the Network tab, check Preserve log to keep requests across page navigations
+6. Perform your workflow (login, navigate, submit forms, etc.)
+7. Use the download icon - Export HAR (with sensitive data) or right-click - Save all as HAR with content
+
+Important: To capture passwords and  other sensitive data in HAR files, you must select "Save all as HAR with content" in the Network
+tab. DevTools stores all data locally on your machine - no data is sent to external servers.
+
+ImportingHAR Files
+
+1. Open your workspace in DevTools Studio
+2. Click Import in the toolbar
+3. Select HAR File as the format
+4. Choose your .har file
+5. (Optional) Filter by domain - uncheck domains you don't want to import
+6. (Optional) Map domains to environment variables
+7. Click Import 
+
+DevTools will:
+- Extract all HTTP requests
+- Organize them by domain amd path
+- Create a visual Flow showing request dependencies
+- Generate variable mappings automatically
+- Add response assertions
