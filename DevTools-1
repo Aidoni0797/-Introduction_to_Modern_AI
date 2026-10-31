@@ -37,4 +37,53 @@ Flow-Based Testing
 Design complex API test scenarios:
 - Visual dependency graphs showing request execution oreder
 - Automatic variable extraction from API responses
-- JavaScript  nodes for custom data 
+- JavaScript  nodes for custom data transformations
+- Loop and conditional execution support
+
+Getting Started
+
+Start with these guides to learn DevTools:
+
+1. Getting Started - Install DevTools and create your first request
+2. Importing HAR Files - Convert browser recordings into flows
+3. Working with Flows - Build visual API test workflows
+4. Environments & Variables - Manage configuration
+5. CLI Tool - Automate flows from the command line
+6. CI/CD Integration - Add to your deployment pipeline
+7. Examples & Best Practices - Real - world patterns
+
+Quick Example
+
+Create a login flow and use the token in subsequent requests:
+
+flows:
+- name: AuthFlow
+steps:
+-request:
+name:Login
+method:POST
+url: '{{BASE_URL}}/auth/login'
+body:
+email: user@example.com
+password: secret
+
+- request:
+name:GetProfile
+method: GET
+url: '{{BASE_URL}}/profile'
+headers:
+Autorization: Bearer {{Login.response.body.token}}
+
+Run with the CLI
+
+devtools flow run auth-flow.yaml
+
+Data Storage
+
+All data is stored locally on your machine:
+- Studio app uses SQLite in your user data directory
+- No data is sent to external servers
+- You control all test data and credentials
+
+Open Source
+DevTools is open source under the Apache-2.0 license and free to use. View the code on Github.
