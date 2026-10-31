@@ -1,0 +1,77 @@
+DevTools-3
+
+Your First Workspace
+
+1. Create a Workspace
+When you first open DevTools Studio:
+
+1. Click "New Workspace"
+2. Give it a name (e.g. "My API Test")
+3. Click Create
+
+Your workspace is now ready to organize your API requests and flows.
+
+2. Create Your First Request
+Let's create a simple API request:
+
+1. Click "Nw request" in the sidebar
+2. Configure the request:
+ - Method: GET
+- URL: https://jsonplaceholder.typicode.com/users/1
+- Name: GetUser
+
+3. Click Send
+
+You should see a successful response with user data in JSON format
+
+3. Save and Organize
+
+DevTools automatically saves your request. You can:
+- Organize requests into folders by domain
+- Add descriptions and tags
+- Group related requests into collections
+
+Quick Tour: Key Features
+Request Editor
+
+The request editor provides a familiar interface similar to Postman:
+URL Builder: Enter your endpoint with autocomplete support
+Headers Tab: Add custom headers (Autorization, Content-Type, etc.)
+Body Tab: Support for JSON, from data, raw text, and binary
+Query Params Tab: Build query strings visually
+Tests Tab: Add response assertions
+
+Response Viewer
+After sending a request:
+Body: View formatted JSON, XML, HTML or raw text
+Headers: Inspect response headers
+Status: HTTP status code and response time
+Variables: See extracted variables (when using flows)
+
+Next Steps
+Npw that you have DevTools installed and unserstand the basics:
+1. Import Real Requests: Learn how to import HAR files from browser recordings
+2. Create Flows: Build visual test workflows with the FlowBuilder
+3. Manage Environments: Set up environments and variables for different configurations
+4. Automate Tests: Integrate with CI/CD using the CLI tool
+
+Common First-Time Questions
+Where is my data stored?
+All data is stored locally on your machine:
+- Studio: SQLite database in your user data directory
+- CLI: In-memory database(ephemeral) or specified workspace file
+
+No data is sent to external servers
+
+What formats can I import?
+
+DevTools supports:
+- HAR files (HTTP Archive)
+- cURL commands
+- OpenAPI/Swagger specs (coming soon)
+
+Dows DevTools support authentication?
+Yes, DevTools supports all standard authentication methods:
+- Bearer tokens
+- Basic Auth
+- API keys (header or query)
