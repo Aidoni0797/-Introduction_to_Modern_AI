@@ -1,0 +1,21 @@
+DevTools-2
+Getting Started with DevTools
+
+This guide will help you install DevTools and create your first API test in minutes.
+
+INstallation
+DevTools is available in two formats: Studion Application and CLI Tool. You can download DevToolsStudio for  macOS, Windows
+or Linux
+
+Studio Application
+Download the Studio app for your platform from the releases page:
+
+Windows:
+DevTools-{version}-win32-{arch}.exe
+
+CLI Tool
+The CLI is perfect for CI/CD pipelines and headless automation
+
+With wget:
+
+wget -q0- https://sh.dev.tools/install.sh | bash
