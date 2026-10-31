@@ -50,3 +50,4 @@ DevTools will:
 - Create a visual Flow showing request dependencies
 - Generate variable mappings automatically
 - Add response assertions
+https://dev.tools/docs/how-to/import-har/
