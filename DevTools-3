@@ -74,4 +74,15 @@ Dows DevTools support authentication?
 Yes, DevTools supports all standard authentication methods:
 - Bearer tokens
 - Basic Auth
-- API keys (header or query)
+- API keys (header or query param)
+- OAuth 2.0 (via variable substitution)
+- Custom authentication schemes
+
+Can I use DevTools in my CI/CD pipeline?
+
+Absolutely! The CLI tool is designed for CI/CD integration. See CI/CD Integration for examples with GitHub Acions,
+GitLab CI, Jenkins and more.
+
+Is DevTools free?
+Yes, DevTools is open source under the Apache-2.0 license and free to use. The source code is available in GitHub.
+
