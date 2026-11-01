@@ -189,3 +189,4 @@ Import Failed: Format Not Detected
 SolutionL: Ensure your file is valid JSON and contains the required fields:
 HAR: Must have log.entires[]
 -cURL: Must start with 
+https://dev.tools/docs/how-to/import-har/
