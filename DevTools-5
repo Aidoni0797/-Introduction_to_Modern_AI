@@ -2,4 +2,30 @@ DevTools-5
 
 Import Features
 
-Automatic Dependency
+Automatic Dependency Detection
+
+DevTools analyzes your HAR file to detect:
+
+Data Dependencies:
+
+Request 1: POST /a[i/auth/login
+Response: {"token": "abc123"}
+Request 2: GET /api/profile
+Header: Authorization: Bearer abc123
+
+DevTools detects this and creates: {{Login.response.body.token}}
+
+
+Timing Dependencies:
+Requests executed within 50ms of each other are automatically linked in the generated Flow.
+
+Mutation Chains:
+
+Sequential POST/PUT/PATCH/DELETE requests are connected to maintain execution oreder.
+
+Variable Mapping
+During import, DevTools can map domain names to variables
+
+Before: https://api.staging.example.com/users
+After: {{BASE_URL}}/users
+Variable: BACE_URL=https://api.staging.example.com
