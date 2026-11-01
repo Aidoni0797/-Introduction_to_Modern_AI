@@ -75,4 +75,46 @@ Limitations:
 - Very large HAR files (>2000 requests) mat skip some optimizations
 
 cURL Commands
-Paste or import cURL commands
+Paste or import cURL commands in the Studio app:
+Import->CURL->Paste command
+
+Supported cURL flags:
+-X / -- request - HTTP method
+-H / --header - Headers
+-d / --data - Request body
+-u / --user - Basic auth
+--url - URL
+-b / --cookie - Cookies
+
+Domain  Filtering
+
+When importing HAR files, you can filter out unwanted domains:
+Common Filters:
+- Analytics (Google Analytics, Mixpanel)
+- Advertising networks
+- CDN assets (images, fonts, CSS)
+- Third-party  scripts
+
+Example:
+-api.myapp.com
+-auth.myapp.com
+-google-analytics.com
+-cdn.example.com
+-fonts.ggoleapis.com
+
+Only checked domains will be imported
+
+Domain-to-Variable Mapping
+
+Map domain names to environment variables during import:
+1. Select domains to import
+2. For each domain, optionally assign a variable name:
+api.staging.example.com->BASE_URL
+auth.staging.example.com->AUTH_URL
+3. DevTools creates environment variables and updates all requests
+
+Result
+Environment: Staging
+Variables:
+BASE_URL: https://api.staging.example.com
+AUTH_URL
