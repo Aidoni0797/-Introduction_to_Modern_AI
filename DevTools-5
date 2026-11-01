@@ -72,4 +72,7 @@ Best For:
 Limitations:
 - Maximum file size: 50MB
 - Only JSON responses are analyzed for variable dependencies
-- Very large HAR files (>)
+- Very large HAR files (>2000 requests) mat skip some optimizations
+
+cURL Commands
+Paste or import cURL commands
