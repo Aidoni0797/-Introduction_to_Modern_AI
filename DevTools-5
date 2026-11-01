@@ -144,4 +144,48 @@ Click any requet to:
 
 Related
 - Postman alternative : / postman-alternative/
-- Generate a HAR (Chrome): / guides
+- Generate a HAR (Chrome): / guides/generate-har-chrome/
+- Flows overview: /flows/
+
+3. Configure Variables
+Go to Environments to:
+- Rebiew auto-detected variables
+- Add new environment-specific values
+- Enable/disable variables
+
+4. Run the Flow
+Execute the entire sequence:
+1. Click Run Flow
+2. Watch requests execute in real-time
+3. Review results and assertions
+4. Check variable extraction
+
+Export Options
+
+DevTools can export your requests back to multiple formats:
+
+Export to HAR
+
+Right-click collectiom->Export->HAR
+
+Use case: Share with browser debugging tools
+
+Export to YAML Flow
+
+Right-click flow->Export->YAML
+
+Use case: Version control, CI/CD (see CLI Tool)
+
+Export cURL
+
+Right-click request->Export->cURL
+
+Use case: Share individual requests for terminal execution
+
+Troubleshooting
+
+Import Failed: Format Not Detected
+
+SolutionL: Ensure your file is valid JSON and contains the required fields:
+HAR: Must have log.entires[]
+-cURL: Must start with 
