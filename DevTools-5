@@ -57,3 +57,9 @@ GET users.http
 GET user-by-id.http
 settings
 PUT update-settings.http
+
+This structure mirrors your API's URL paths for easy navigation
+
+Supported Import Formats
+HAR Files (.har)
+Automatic Detection: Looks for log.entries
