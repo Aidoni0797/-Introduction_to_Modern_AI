@@ -137,4 +137,11 @@ Navigate to the FLow tab to see:
 
 2. Edit Requests
 Click any requet to:
-- UpdateURLS
+- Update URLS, headers, or body
+- Add authentication
+- Modify assertions
+- Add pre-request scripts
+
+Related
+- Postman alternative : / postman-alternative/
+- Generate a HAR (Chrome): / guides
