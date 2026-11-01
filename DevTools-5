@@ -117,4 +117,24 @@ Result
 Environment: Staging
 Variables:
 BASE_URL: https://api.staging.example.com
-AUTH_URL
+AUTH_URL: https://auth.staging.example.com
+
+Environment: Production
+Variables:
+BASE_URL: https://api.example.com
+AUTH_URL: https://auth.example.com
+
+Switch environments, andall requests automatically use the new URLs!
+
+Working with Imported Requests
+
+After importing
+1. Review the Generated Flow
+Navigate to the FLow tab to see:
+- Request execution order
+- Data dependencies (arrows between nodes)
+- Parallel vs. sequential execution
+
+2. Edit Requests
+Click any requet to:
+- UpdateURLS
