@@ -62,4 +62,14 @@ This structure mirrors your API's URL paths for easy navigation
 
 Supported Import Formats
 HAR Files (.har)
-Automatic Detection: Looks for log.entries
+Automatic Detection: Looks for log.entries[] structure
+
+Best For:
+- Browser recordings
+- Complete user worflows
+- Performance analysis
+
+Limitations:
+- Maximum file size: 50MB
+- Only JSON responses are analyzed for variable dependencies
+- Very large HAR files ()
