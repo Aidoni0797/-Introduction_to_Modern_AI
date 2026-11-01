@@ -29,3 +29,31 @@ During import, DevTools can map domain names to variables
 Before: https://api.staging.example.com/users
 After: {{BASE_URL}}/users
 Variable: BACE_URL=https://api.staging.example.com
+
+This makes it easy to:
+- Switch between environments (dev, staging, prod)
+- Share test collections with teammates
+- Run tests against different servers
+
+Flow Generation
+
+Every HAR import creates a visual Flow showing:
+- Request sequence - Left-to-right execution order
+- Dependencies - Arrows showing data flow between requests
+- Parallel requests - Independent requests at the same level
+- Assertions - Status code checks based on HAR responses
+
+Example Flow Structure:
+[Start]->[Login]->[Get Profile]->[Update settings]->[Get Notifiications]
+
+File Organization
+Imported requests are organized hierarchically:
+workspace
+api.example.com
+auth
+POST login.http
+users
+GET users.http
+GET user-by-id.http
+settings
+PUT update-settings.http
