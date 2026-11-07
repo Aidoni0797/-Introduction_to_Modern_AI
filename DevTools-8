@@ -334,4 +334,107 @@ Node Output Variables
 
 Every node automatically creates output variables. Access them from sunsequent nodes:
 
-Format;
+Format:
+{{NodeName.propeerty.path.to.value}}
+
+Examples:
+{{Login.response.body.token}}
+{{GetUsers.response.status}}
+{{ProcessData.activeCount}}
+{{FetchUsersLoop.index}}
+
+Dependencies and Execution Order
+Explicit Dependencies
+Use depends_on to enforce execution order:
+
+YAML:
+- request:
+    name: GetUser
+    method: GET
+    url: https://api.example.com/users/1
+ 
+- request:
+    name: UpdateUser
+    method: PUT
+    url: https://api.example.com/users/1
+    depends_on: GetUser  # Waits for GetUser to complete
+
+Studio:
+Connect nodes with edges (visual dependencies)
+
+Implicit Dependencies
+
+DevTools detects dependencies automatically when you:
+- Reference a node's output variables
+- Connect nodes visually
+
+Example:
+Using {{Login.response.body.token}} automatically creates a dependency on the Login node.
+
+Dependency Resolution
+Before execution, DevTools:
+1. Builds a dependency graph (DAG - Directed Acyclic Graph)
+2. Validates no circular dependencies exist
+3. Determines execution order using topological sort
+4. Identifies parallelization opportunities
+
+Execution modes:
+- Auto: Dev tools chooses based on graph complexity
+- Single: Sequential execution (easier debugging)
+- Multi: Maximum parallelization (faster execution)
+
+Assertions and Validations
+
+Add assertions to validate API responses:
+Status Code Assertions
+response.status == 200
+response.status >= 200 && response.status < 300
+
+Body Assertions
+response.body.success == true
+response.body.users.length > 0
+response.body.id != null
+
+Header Assertions
+response.headers["Content-Type"] == "applicaition/json"
+response.headers["X-Rate-Limit-Remaining"] > 0
+
+Custom Assertions
+
+Use JavaScript nodes for complex validation:
+export default function(context) {
+  const response = context.GetUser.response;
+ 
+  // Validation logic
+  const isValid =
+    response.status === 200 &&
+    response.body.email.includes('@') &&
+    response.body.createdAt < Date.now();
+ 
+  if (!isValid) {
+    throw new Error('User validation failed');
+  }
+ 
+  return { validated: true };
+}
+
+Execution and Results
+Running a Flow
+Studio:
+1. Open your flow
+2. Click Run Flow
+3. Watch nodes execute in real-time (visual feedback)
+4. Review results when complete
+
+CLI:
+devtools flow run workspace.yaml FlowName
+ 
+## Related
+ 
+- Flows overview: /flows/
+- Templates library: /templates/
+- Postman alternative: /postman-alternative/
+
+Execution States
+
+Nodes
