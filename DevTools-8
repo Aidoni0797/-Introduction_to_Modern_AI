@@ -437,4 +437,30 @@ devtools flow run workspace.yaml FlowName
 
 Execution States
 
-Nodes
+Nodes tarnsition through states:
+- Pending: Not yet executed
+- Running: Currently executing
+- Success: Completed successfully
+- Failure: Faileed with error
+- Canceled: Execution stopped
+
+Viewing Results
+After execution:
+
+Node Results:
+Click any node to see
+Input variables
+Output variables
+Request/response details
+Execution duration
+Errors(if any)
+
+Flow Results:
+Total duration
+Success/failure count
+Execution timeline
+Variable values at each step
+
+Execution History
+DevTools maintains execution history:
+- Pas
