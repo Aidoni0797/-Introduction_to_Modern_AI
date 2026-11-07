@@ -119,4 +119,15 @@ processedAt: new Date().toISOString()
 Built-in Functions:
 console.log()
 JSON.parse()
-JSON,
+JSON.stringfy()
+Date.now()
+
+Output:
+The returned object becomes available as:
+{{NodeName.activeCount}}
+{{NodeName.activeUSerIds}}
+{{NodeName.processedAt}}
+
+7. GraphQL Node
+
+Executes a GrephQL query or mutation. Use when your API is GraphQL-based instead of REST - you get a dedicated query editor, variables pane, and the same assertion/header
