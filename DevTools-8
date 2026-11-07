@@ -137,4 +137,9 @@ full standalone editor.
 Configuration:
 - URL: GraphQL endpoint (spports {{BASE_URL}} variables)
 - Query / Variables / Headers / Assertion tabs mirror the standalone request editor
-- Eveluated /
+- Eveluated / Browse switch to inspect the compiled query with variables substituted
+
+Output Structure:
+{{NodeName.response.status}}
+{{NodeName.response.body.data.<field>}}
+{{NodeName}}
