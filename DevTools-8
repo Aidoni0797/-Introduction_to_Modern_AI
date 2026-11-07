@@ -247,4 +247,12 @@ Example - parent and child:
         depends_on: Session
 
 12. Sub-Flow Return Node
-Terminal node for a child flow. Defines the typed payload that becomes available 
+Terminal node for a child flow. Defines the typed payload that becomes available as node output on the parent's
+Run Sub Flow node. A flow that is ever invoked as a sub-flow must end in one.
+
+Configuration:
+- Outputs: key - expression map, evaluated at the point node runs
+
+Connecting Nodes
+Execution Flow
+Nodes are connected using edges. And
