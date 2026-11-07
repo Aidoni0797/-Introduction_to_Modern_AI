@@ -130,4 +130,9 @@ The returned object becomes available as:
 
 7. GraphQL Node
 
-Executes a GrephQL query or mutation. Use when your API is GraphQL-based instead of REST - you get a dedicated query editor, variables pane, and the same assertion/header
+Executes a GrephQL query or mutation. Use when your API is GraphQL-based instead of REST - you get a dedicated query editor,
+variables pane, and the same assertion/header/response-history surface as HTTP requests. See graphQL Requests for the
+full standalone editor.
+
+Configuration:
+- URL: GraphQL endpoint (spports {{BASE_URL}})
