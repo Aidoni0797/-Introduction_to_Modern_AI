@@ -53,4 +53,70 @@ loop: GetUserById
 
 - request:
 name: GetUserById
+method: GET
+url: https://api.example.com/users/{{FetchUsers.index}}
 
+5. For-Each Loop Node
+Iterates over an array of items from a previous response.
+Configuration:
+- Items Expression: Path to array (e.g., {{GetUsers.response.body}})
+- Loop Target: Node to execute for each item
+- Break Condition: Optional early exit
+- Error Policy: Ignore or Break
+
+Loop Variables:
+
+Inside the loop, access:
+
+{{ForEachName.item}}
+{{ForEachName.index}}
+
+Example:
+
+Process each user from a list:
+- request:
+name: GetUser
+method: GET
+url: https://api.example.com/users
+- for_each:
+name: ProcessUsers
+items: '{{GetUsers.response.body}}'
+loop:UpdateUser
+
+-request:
+name:UpdateUser
+method: PUT
+url: https://api.example.com/users/{{ProcessUsers.item.id}}
+body:
+lastProcessed: '{{now().Unix()}}'
+
+6. JavaScript Node
+Executes custom JavaScript code for data transformation and complex logic.
+
+Configuration:
+- Code: JavaScript function (ES6+syntax)
+- Dependencies: Nodes that must complete before this runs
+
+Function Signature:
+export default function(context){
+return{
+key: "value"
+};
+}
+
+Accessing Context:
+export default function(context){
+const users = context.GetUsers?.response?.body;
+const baseUrl = context.BASE_URL;
+const activeUsers = users.filter(u=u.active);
+return{
+activeCount: activeUsers.length;
+activeUserIds:activeUsers.map(u=u.id),
+processedAt: new Date().toISOString()
+};
+}
+
+Built-in Functions:
+console.log()
+JSON.parse()
+JSON,
