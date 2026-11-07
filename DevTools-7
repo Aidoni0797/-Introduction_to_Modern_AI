@@ -1,0 +1,60 @@
+DevTools-7
+
+Node Types
+
+1. Start Node
+
+Every Flow begins with a Start node. It's automatically created and cannot be deleted.
+Configuration:
+Name: Optional (default: "Start")
+
+Use Case:
+- Entry point for manual execution
+- Trigger point when flow is called from another flow
+
+2. HTTP Request Node
+
+Makes an API call abd captures the response.
+
+Configuration:
+- Request: Select and existing HTTP request from your workspace, or create inline
+- Method: GET, POST, PUT, DELETE, PATCH, etc.
+- URL: Full URL or use variables (e.g. {{BASE_URL}}/users)
+- Headers: Key-Value pairs (supports variables)
+- Query Params: URL query parameters
+- Body: JSON, from data, raw text, or binary
+- Assertions: Response validation rules
+
+Output Variables:
+Every HTTP node creates variables in this structure:
+{
+request:{
+method: "POST",
+url: "https://api.example.com/login",
+headers:{"Content-Type": "application/json"},
+queries:{},
+body:{
+email:"user@example.com"
+},
+response:{
+status:200,
+body:{token:"abc123", userId:42},
+headers:{
+"Content-Type":"application/json",
+duration:245
+}
+}
+
+Accessing Variables:
+From subsequent nodes, reference this data'
+{{Login.response.body.token}}
+{{Login.response.status}}
+{{Login.request.url}}
+
+3. Condition Node {If/Else}
+Branches execution based on a boolean expreassion.
+Configuration:
+- Condition: JavaScript expression that eveluates to true/false
+- Then: Node to execute if condition is true
+}
+}
