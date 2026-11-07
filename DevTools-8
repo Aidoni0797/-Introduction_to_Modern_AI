@@ -1,3 +1,24 @@
 3. Condition Node (If/Else)
 
-Branches executuion
+Branches executuion based on a boolean expression.
+
+Configuration:
+- Condition: JavaScript expression that eveluates to true/false
+- Then: Node to execute if condition is true
+- Else: Node to execute if condition is false (optional)
+
+Examples:
+GetUser.response.status == 200
+
+Login.response.body.success == true
+
+CreatedUser.response.body.id > 0
+
+GetProfile.response.body.role == "admin"
+
+GetUsers.response.status == 200 && GetUsers.response.body.length >0
+
+Visual Flow:
+
+[GetUser]-[CheckStatus]
+Then
