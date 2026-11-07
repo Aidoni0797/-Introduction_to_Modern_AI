@@ -247,3 +247,4 @@ Example - parent and child:
         depends_on: Session
 
 12. Sub-Flow Return Node
+Terminal node for a child flow. Defines the typed payload that becomes available 
