@@ -1,0 +1,52 @@
+DevTools-6
+
+Working with Flows
+
+Flows are the heart of DevTools' automation capabilities. They allow you to create visual, graph-based API test workflows
+without writing code. This guide covers everything you need to know about building, custmizing, and executing Flows.
+
+What is a Flow?
+
+A Flow is a visual representation of an API testing workflow (HTTP requests, conditions, loops, scripts)
+Edges: Connections showing execution oreder and data dependencies
+Variables: Data passed between nodes
+
+Think of Flows as:
+- Visual programming for API tests
+- Dependency graphs for request sequences
+- Reusable test scenarious
+
+Creating Your First Flow
+
+Method 1: Build from Scratch
+
+1. Click New Flow in your workspace
+2. Drag nodes from the palette onto the canvas:
+- HTTP Request: - Make an API call
+- Condition - Add if/else logic
+- For-Each - Iterate over arays
+- JavaScript - Custom transformation logic
+
+3. Connect nodes by dragging from output handles to input handles
+4. Configure each node (see Node Types below)
+5. Click  Run Flow to execute
+
+Method 2: Auto-Generate from HAR Import
+When you import a HAR file, DevTools automatically creates a Flow showing:
+- Request execution order
+- Data dependencies between requests
+- Variable extraction points
+
+You can then customize this auto-generated Flow
+
+Method 3: Import from YAML
+
+Load Flow definitions from YAML files (useful for version control and CI/CD):
+
+Studio:
+Import-YAML Flow-Select file
+
+CLI:
+devtools flow run my-flow.yaml
+
+See YAML Flow Format below
