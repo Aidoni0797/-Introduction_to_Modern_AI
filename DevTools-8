@@ -255,4 +255,83 @@ Configuration:
 
 Connecting Nodes
 Execution Flow
-Nodes are connected using edges. And
+Nodes are connected using edges. An edge defines:
+- Execution order: Child nodes run after parent completes
+- Data dependencies: Child can access parent's output
+
+Creating Edges:
+1. Click and drag from a node's output handle (right side)
+2. Releasse on another node's input handle (left side)
+
+Handle Types
+Different node types have different handles:
+- Standard Nodes (HTTP, JS): One output handle
+- Condition Nodes: Two output handles (Then, Else)
+- Loop Nodes: Two output handles (Loop target, Next node after loop)
+
+Example
+[Login]-[GetProfile]
+Then - [CheckRole]
+Then - [AdminDashboard]
+Else - [UserDashboard]
+
+Parallel Execution
+
+Nodes without dependencies can run in parallel:
+[Start] - [GetUser] [GetPosts] [GetComments]
+[GetUser]
+[GetPosts] - [CombineData]
+[GetComments]
+
+DevTools automatically detects parallelization opportunities
+
+Flow Variables
+
+Types of Variables
+
+Flows can access three types of variables:
+1. Global Variables: Available to all workspaces
+2. Environment Variables: Specific to the selected environment
+3. Flow Variables: Defined within the flow
+
+Priority (highest to lowest):
+Flow Variables > Environment Variables > Global Variables
+
+Defining  Flow Variables
+Add variables at the flow level:
+Studio:
+Flow Settings > Variables > Add Variable
+
+YAML:
+flows:
+  - name: MyFlow
+    variables:
+      - name: user_id
+        value: '1'
+      - name: base_url
+        value: 'https://api.example.com'
+
+Using Variables
+Reference variables with {{varibale_name}} syntax:
+In URLs:
+{{BASW_URL}}/users/{{user_id}}
+
+In Headers:
+headers:
+  Authorization: Bearer {{access_token}}
+  X-User-ID: '{{user_id}}'
+
+In Body:
+{
+"email": "{{user_email}}",
+"name": "{{user_name}}"
+}
+
+In Conditions:
+{{GetUser.response.body.id}} == {{expected_user_id}}
+
+Node Output Variables
+
+Every node automatically creates output variables. Access them from sunsequent nodes:
+
+Format;
