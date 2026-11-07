@@ -21,4 +21,36 @@ GetUsers.response.status == 200 && GetUsers.response.body.length >0
 Visual Flow:
 
 [GetUser]-[CheckStatus]
-Then
+Then - [ProcessUser]
+Else - [HandleError]
+
+4. For Loop Node
+
+Executes a sequence of nodes a fixed number of times
+
+Configuration:
+
+- Iteration Count: Number of times to loop (cann use variables)
+Loop Target: Node to execute on each  iteration
+Break Condition: Optional condition to exit early
+
+Error Policy
+Ignore - Continue on error
+Break - Stop loop on error
+
+Loop Variables:
+Inside the loop, access:
+{{LoopName.index}}
+{{LoopName.iter_count}}
+
+Example:
+
+Fetch 5 users sequentally:
+- for:
+name: FetchUser
+iter_count: 5
+loop: GetUserById
+
+- request:
+name: GetUserById
+
